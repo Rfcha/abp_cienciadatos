@@ -1,0 +1,14 @@
+﻿[2026-06-01 22:39:21] [INFO] Inicio setup ABP F1/F2 Ultra
+[2026-06-01 22:39:21] [INFO] ProjectRoot: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos
+[2026-06-01 22:39:21] [INFO] Repositorio Git existente detectado
+[2026-06-01 22:39:21] [INFO] Entorno virtual raiz ya existe
+[2026-06-01 22:39:21] [INFO] Instalando/actualizando paquetes base
+[2026-06-01 22:39:24] [OK] Paquetes instalados
+[2026-06-01 22:39:24] [OK] Kernel Jupyter registrado: Python (abp_ds_ai)
+[2026-06-01 22:39:24] [OK] Notebook generado: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F1\notebooks\F1_Definicion.ipynb
+[2026-06-01 22:39:24] [OK] Notebook generado: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F2\notebooks\F2_Preprocesamiento.ipynb
+[2026-06-01 22:39:25] [OK] Evidencia de entorno generada
+[2026-06-01 22:39:25] [INFO] Ejecutando validacion F2 por consola
+[2026-06-01 22:39:30] [OK] Validacion F2 OK
+[2026-06-01 22:39:31] [OK] nbstripout instalado en repo para limpiar salidas de notebooks
+[2026-06-01 22:39:31] [INFO] Preparando commit Git

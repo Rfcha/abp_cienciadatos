@@ -1,0 +1,19 @@
+﻿[2026-06-01 22:29:35] [INFO] Inicio setup ABP F1/F2 Ultra
+[2026-06-01 22:29:35] [INFO] ProjectRoot: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos
+[2026-06-01 22:29:35] [OK] Creada carpeta: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\docs
+[2026-06-01 22:29:35] [OK] Creada carpeta: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\common
+[2026-06-01 22:29:35] [OK] Creada carpeta: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\common\src
+[2026-06-01 22:29:35] [OK] Creada carpeta: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\common\tests
+[2026-06-01 22:29:35] [OK] Creada carpeta: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F1\evidencias
+[2026-06-01 22:29:35] [OK] Creada carpeta: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F2\notebooks
+[2026-06-01 22:29:35] [OK] Creada carpeta: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F2\src
+[2026-06-01 22:29:35] [OK] Creada carpeta: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F2\docs
+[2026-06-01 22:29:35] [OK] Creada carpeta: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F2\data\raw
+[2026-06-01 22:29:35] [OK] Creada carpeta: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F2\data\processed
+[2026-06-01 22:29:35] [OK] Creada carpeta: D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F2\evidencias
+[2026-06-01 22:29:35] [OK] Repositorio Git inicializado en main
+[2026-06-01 22:29:41] [OK] Entorno virtual raiz creado: .venv
+[2026-06-01 22:29:41] [INFO] Instalando/actualizando paquetes base
+[2026-06-01 22:33:08] [OK] Paquetes instalados
+[2026-06-01 22:33:09] [OK] Kernel Jupyter registrado: Python (abp_ds_ai)
+[2026-06-01 22:33:09] [WARN] Dataset demo creado para F2. Reemplazar por dataset definitivo si corresponde.

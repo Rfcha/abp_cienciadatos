@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Entornos
+.venv/
+venv/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datos pesados o sensibles
+**/data/raw/*
+**/data/processed/*
+!**/data/raw/.gitkeep
+!**/data/processed/.gitkeep
+*.parquet
+*.feather
+*.xlsx
+*.xls
+
+# Evidencias locales pesadas
+**/evidencias/*.html
+**/evidencias/*.png
+**/evidencias/*.jpg
+logs/*.tmp
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
