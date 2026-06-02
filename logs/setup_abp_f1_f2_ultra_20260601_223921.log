@@ -12,3 +12,5 @@
 [2026-06-01 22:39:30] [OK] Validacion F2 OK
 [2026-06-01 22:39:31] [OK] nbstripout instalado en repo para limpiar salidas de notebooks
 [2026-06-01 22:39:31] [INFO] Preparando commit Git
+[2026-06-01 22:39:32] [OK] Commit creado
+[2026-06-01 22:39:32] [OK] Setup finalizado
