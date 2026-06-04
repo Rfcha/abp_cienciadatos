@@ -1,39 +1,23 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-.pytest_cache/
-.mypy_cache/
-
-# Entornos
+# Entornos virtuales
 .venv/
 venv/
 env/
-.env
+
+# Python cache
+__pycache__/
+*.pyc
+.ruff_cache/
 
 # Jupyter
 .ipynb_checkpoints/
 
-# Datos pesados o sensibles
-**/data/raw/*
-**/data/processed/*
-!**/data/raw/.gitkeep
-!**/data/processed/.gitkeep
-*.parquet
-*.feather
-*.xlsx
-*.xls
+# Logs temporales
+logs/*.log
 
-# Evidencias locales pesadas
-**/evidencias/*.html
-**/evidencias/*.png
-**/evidencias/*.jpg
-logs/*.tmp
-
-# IDE / OS
-.vscode/
-.idea/
-Thumbs.db
-desktop.ini
+# Archivos del sistema
 .DS_Store
+Thumbs.db
+
+# NO ignorar datasets de la entrega
+!F2/data/raw/*.csv
+!F2/data/processed/*.csv
