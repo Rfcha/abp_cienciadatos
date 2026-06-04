@@ -1,5 +1,8 @@
-# Datos crudos (no versionar archivos pesados)
-data/raw/*.csv
+# --- Datos crudos ---
+# En un proyecto real, los datos crudos NO se versionan (pueden ser muy
+# pesados y cambiar con frecuencia). Para esta entrega formativa se sube el
+# dataset sintetico para que quede visible en el repositorio.
+# data/raw/*.csv   <- descomentar esta linea para volver a ignorar los CSV
 
 # Entornos virtuales
 .venv/

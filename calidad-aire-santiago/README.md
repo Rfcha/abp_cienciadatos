@@ -37,11 +37,17 @@ El detalle de cada variable está en [`docs/diccionario_datos.md`](docs/dicciona
 
 Fuente: https://sinca.mma.gob.cl
 
-> **Nota:** en esta fase se utiliza un dataset sintético de demostración que
-> reproduce relaciones físicas documentadas de la contaminación en Santiago
-> (inversión térmica invernal, ventilación por viento, ciclo diario por
-> transporte y calefacción a leña). Para conclusiones definitivas deben usarse
-> datos reales descargados del SINCA.
+> **Nota sobre los datos:** en esta fase se utiliza un dataset sintético de
+> demostración que reproduce relaciones físicas documentadas de la contaminación
+> en Santiago (inversión térmica invernal, ventilación por viento, ciclo diario
+> por transporte y calefacción a leña). Para conclusiones definitivas deben
+> usarse datos reales descargados del SINCA.
+
+> **Nota sobre el versionamiento:** como buena práctica en ciencia de datos, los
+> datos crudos normalmente **no** se versionan en Git (suelen ser pesados y
+> cambiar con frecuencia). En este repositorio se incluye el CSV de demostración
+> en `data/raw/` para facilitar la revisión de la entrega; la regla
+> correspondiente queda comentada en `.gitignore`.
 
 ## Estructura del repositorio
 
@@ -51,7 +57,7 @@ calidad-aire-santiago/
 ├── requirements.txt       Dependencias de Python
 ├── .gitignore             Archivos ignorados por Git
 ├── data/
-│   ├── raw/               CSV originales del SINCA (no se versionan)
+│   ├── raw/               CSV originales del SINCA
 │   └── processed/         Datos limpios listos para análisis
 ├── notebooks/
 │   └── 01_exploracion.ipynb   Exploración inicial de los datos
@@ -82,7 +88,7 @@ df = pd.read_csv('../data/raw/sinca_santiago.csv',
 
 ## Herramientas
 
-- Python 3.11 (pandas, numpy, matplotlib, seaborn)
+- Python 3.11 (pandas, numpy, matplotlib)
 - Jupyter Notebooks
 - Git / GitHub para control de versiones y colaboración
 
