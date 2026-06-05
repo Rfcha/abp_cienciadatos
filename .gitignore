@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .venv/
 venv/
 env/
@@ -9,3 +10,28 @@ Thumbs.db
 .vscode/
 .idea/
 F2/data/processed/*.csv
+=======
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs temporales
+logs/*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# NO ignorar datasets de la entrega
+!F2/data/raw/*.csv
+!F2/data/processed/*.csv
+>>>>>>> 10a630b32eaf59ab6dc8927cdba17bbf7caf4d8b

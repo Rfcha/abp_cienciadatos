@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 id,segmento,region,antiguedad_meses,monto_operacion,dias_mora,canal,estado,score_riesgo
 1,Empresa,Metropolitana,24,1500000,0,Web,Activo,0.12
 2,Pyme,O'Higgins,12,850000,5,Sucursal,Activo,0.25
@@ -20,3 +21,18 @@ id,segmento,region,antiguedad_meses,monto_operacion,dias_mora,canal,estado,score
 12,Empresa,Metropolitana,40,2800000,0,Ejecutivo,Activo,0.07
 19,Pyme,Valparaiso,16,840000,6,Web,Activo,0.23
 20,Microempresa,O'Higgins,5,280000,50,Sucursal,Moroso,0.71
+=======
+id,segmento,region,antiguedad_meses,monto_operacion,dias_mora,canal,estado,score_riesgo
+1,Empresa,Metropolitana,24,1500000,0,Web,Activo,0.12
+2,Pyme,O'Higgins,12,850000,5,Sucursal,Activo,0.25
+3,Empresa,Valparaiso,36,2300000,0,Ejecutivo,Activo,0.08
+4,Microempresa,Metropolitana,6,,15,Web,Revision,0.44
+5,Pyme,O'Higgins,18,920000,,Sucursal,Activo,0.22
+6,Empresa,Biobio,48,3100000,0,Ejecutivo,Activo,0.06
+7,Microempresa,Valparaiso,9,400000,30,Web,Moroso,0.65
+8,Pyme,Metropolitana,15,760000,3,Web,Activo,0.19
+9,Empresa,O'Higgins,60,4500000,0,Ejecutivo,Activo,0.04
+10,Microempresa,Biobio,4,300000,45,Sucursal,Moroso,0.78
+11,Pyme,Valparaiso,22,1100000,2,Web,Activo,0.18
+12,Empresa,Metropolitana,40,2800000,0,Ejecutivo,Activo,0.07
+>>>>>>> 10a630b32eaf59ab6dc8927cdba17bbf7caf4d8b

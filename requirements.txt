@@ -1,3 +1,18 @@
+<<<<<<< HEAD
 pandas==2.2.2
 numpy==1.26.4
 jupyter==1.0.0
+=======
+numpy
+pandas
+matplotlib
+scikit-learn
+jupyterlab
+notebook
+ipykernel
+nbformat
+nbconvert
+jupytext
+nbstripout
+pytest
+>>>>>>> 10a630b32eaf59ab6dc8927cdba17bbf7caf4d8b
