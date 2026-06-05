@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+jupyterlab
+notebook
+ipykernel
+nbformat
+nbconvert
+jupytext
+nbstripout
+pytest
