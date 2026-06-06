@@ -1,20 +1,20 @@
 # Checklist de entrega - Semana 1 ABP
 
 ## Sumativa 1 - Fase 1
-- [ ] Portada institucional completa.
-- [ ] Indice automatico actualizado.
-- [ ] Introduccion y contextualizacion.
-- [ ] Problematica delimitada.
-- [ ] Objetivo general y objetivos especificos.
-- [ ] Alcance, restricciones y supuestos.
-- [ ] Herramientas cientificas declaradas.
-- [ ] Entorno reproducible documentado.
-- [ ] requirements.txt actualizado.
-- [ ] Notebook F1 ejecuta sin errores.
-- [ ] README F1 actualizado.
-- [ ] GitHub con commits descriptivos.
-- [ ] Mapa conceptual vinculado con repo/notebook/informe.
-- [ ] Bibliografia APA 7 con minimo 5 fuentes.
+- [x] Portada institucional completa.
+- [x] Indice automatico actualizado.
+- [x] Introduccion y contextualizacion.
+- [x] Problematica delimitada.
+- [x] Objetivo general y objetivos especificos.
+- [x] Alcance, restricciones y supuestos.
+- [x] Herramientas cientificas declaradas.
+- [x] Entorno reproducible documentado.
+- [x] requirements.txt actualizado.
+- [x] Notebook F1 ejecuta sin errores.
+- [x] README F1 actualizado.
+- [x] GitHub con commits descriptivos.
+- [x] Mapa conceptual vinculado con repo/notebook/informe.
+- [x] Bibliografia APA 7 con minimo 5 fuentes.
 
 ## Sumativa 2 - Fase 2
 - [ ] Dataset definitivo en F2/data/raw/dataset_base.csv.
