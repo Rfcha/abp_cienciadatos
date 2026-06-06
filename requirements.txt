@@ -1,18 +1,44 @@
-<<<<<<< HEAD
-pandas==2.2.2
+# ============================================================
+# Proyecto ABP — Ciencia de Datos Reproducible (MCDI500)
+# Grupo 3
+#
+# Dependencias base para F1, F2 y F3 (calidad-aire-santiago)
+# Compatible con Python 3.12.x
+# ============================================================
+
+# Core de ciencia de datos
 numpy==1.26.4
-jupyter==1.0.0
-=======
-numpy
-pandas
-matplotlib
-scikit-learn
-jupyterlab
-notebook
-ipykernel
-nbformat
-nbconvert
-jupytext
-nbstripout
-pytest
->>>>>>> 10a630b32eaf59ab6dc8927cdba17bbf7caf4d8b
+pandas==2.2.2
+scipy==1.13.1
+
+# Visualizacion
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# Machine Learning y utilidades analiticas
+scikit-learn==1.5.2
+
+# Jupyter / notebooks
+jupyterlab==4.2.5
+notebook==7.2.2
+ipykernel==6.29.5
+ipywidgets==8.1.5
+nbformat==5.10.4
+nbconvert==7.16.4
+jupytext==1.16.4
+nbstripout==0.7.1
+
+# Calidad de codigo, formato y pruebas
+ruff==0.6.9
+black==24.8.0
+pytest==8.3.3
+
+# Manejo de configuracion y archivos
+python-dotenv==1.0.1
+openpyxl==3.1.5
+
+# Compatibilidad con solicitudes HTTP y fuentes externas simples
+requests==2.32.3
+
+# Utilidades de progreso y experiencia de trabajo
+tqdm==4.66.5
