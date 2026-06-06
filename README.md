@@ -11,8 +11,6 @@
 - Sergio Fernández Almonacid
 - Pablo Villalobos González
 
----
-
 ## 1. Descripción general
 
 Este repositorio consolida el trabajo académico del Grupo 3 para el proyecto ABP del curso **MCDI500**.
@@ -35,7 +33,6 @@ El repositorio se organiza en tres proyectos principales:
 | F2 | `F2/` | Obtención, limpieza, transformación y preparación inicial de datos. |
 | F3 | `calidad-aire-santiago/` | Proyecto aplicado sobre calidad del aire en Santiago de Chile. |
 
----
 
 ## 2. Proyecto F1 — Definición y entorno reproducible
 
@@ -62,7 +59,6 @@ F1/
 └── requirements.txt
 ```
 
----
 
 ## 3. Proyecto F2 — Obtención, limpieza y transformación
 
@@ -89,8 +85,6 @@ F2/
 ├── README.md
 └── requirements.txt
 ```
-
----
 
 ## 4. Proyecto F3 — Calidad del Aire en Santiago
 
@@ -123,7 +117,6 @@ calidad-aire-santiago/
 └── requirements.txt
 ```
 
----
 
 ## 5. Estructura general del repositorio
 
@@ -231,7 +224,6 @@ python -m ipykernel install --user --name abp-cienciadatos --display-name "Pytho
 jupyter lab
 ```
 
----
 
 ## 7. Ejecución recomendada
 
@@ -269,7 +261,6 @@ Ejecutar todas las celdas desde el kernel:
 Python (ABP Ciencia Datos)
 ```
 
----
 
 ## 8. Flujo colaborativo
 
@@ -295,7 +286,6 @@ docs/actualizacion-readme
 fix/correccion-requirements
 ```
 
----
 
 ## 9. Pull Requests
 
@@ -318,7 +308,6 @@ El template de Pull Request se encuentra en:
 .github/pull_request_template.md
 ```
 
----
 
 ## 10. Convención de commits
 
@@ -342,7 +331,6 @@ git commit -m "feat: agrega exploracion inicial de calidad del aire"
 git commit -m "fix: resuelve conflicto de merge en README"
 ```
 
----
 
 ## 11. Validaciones recomendadas
 
@@ -362,7 +350,6 @@ Para notebooks:
 jupyter nbconvert --to notebook --execute calidad-aire-santiago/notebooks/01_exploracion.ipynb --output 01_exploracion_validado.ipynb
 ```
 
----
 
 ## 12. Buenas prácticas del repositorio
 
@@ -377,7 +364,6 @@ jupyter nbconvert --to notebook --execute calidad-aire-santiago/notebooks/01_exp
 - Usar nombres de archivos claros y consistentes.
 - Mantener `requirements.txt` actualizado.
 
----
 
 ## 13. Estado del proyecto
 
@@ -395,7 +381,6 @@ jupyter nbconvert --to notebook --execute calidad-aire-santiago/notebooks/01_exp
 | Diccionario de datos | Implementado |
 | Notebook exploratorio F3 | Implementado |
 
----
 
 ## 14. Comandos Git útiles
 
@@ -417,7 +402,6 @@ git push -u origin docs/actualizacion-readme-requirements
 
 Luego crear Pull Request hacia `main` o `develop`, según el flujo acordado por el equipo.
 
----
 
 ## 15. Licencia y uso académico
 
