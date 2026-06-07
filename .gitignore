@@ -30,3 +30,4 @@ Thumbs.db
 !F1/data/processed/*.csv
 !F2/data/raw/*.csv
 !F2/data/processed/*.csv
+logs/validate_f2_tmp.py
