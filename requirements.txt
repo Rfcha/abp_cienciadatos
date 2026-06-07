@@ -1,7 +1,10 @@
 # ============================================================
 # Proyecto ABP — Ciencia de Datos Reproducible (MCDI500)
 # Grupo 3
+<<<<<<< HEAD
 #
+=======
+>>>>>>> main
 # Dependencias base para F1, F2 y F3 (calidad-aire-santiago)
 # Compatible con Python 3.12.x
 # ============================================================

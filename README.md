@@ -11,8 +11,15 @@
 - Sergio Fernández Almonacid
 - Pablo Villalobos González
 
+<<<<<<< HEAD
 ## 1. Descripción general
 
+=======
+---
+
+## 1. Descripción general
+
+>>>>>>> main
 Este repositorio consolida el trabajo académico del Grupo 3 para el proyecto ABP del curso **MCDI500**.
 
 El objetivo principal es construir un proyecto de ciencia de datos reproducible, versionado y documentado, aplicando buenas prácticas de:
@@ -33,6 +40,10 @@ El repositorio se organiza en tres proyectos principales:
 | F2 | `F2/` | Obtención, limpieza, transformación y preparación inicial de datos. |
 | F3 | `calidad-aire-santiago/` | Proyecto aplicado sobre calidad del aire en Santiago de Chile. |
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 2. Proyecto F1 — Definición y entorno reproducible
 
@@ -59,6 +70,10 @@ F1/
 └── requirements.txt
 ```
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 3. Proyecto F2 — Obtención, limpieza y transformación
 
@@ -86,6 +101,11 @@ F2/
 └── requirements.txt
 ```
 
+<<<<<<< HEAD
+=======
+---
+
+>>>>>>> main
 ## 4. Proyecto F3 — Calidad del Aire en Santiago
 
 La carpeta `calidad-aire-santiago/` corresponde al proyecto aplicado del repositorio.
@@ -117,6 +137,10 @@ calidad-aire-santiago/
 └── requirements.txt
 ```
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 5. Estructura general del repositorio
 
@@ -224,6 +248,10 @@ python -m ipykernel install --user --name abp-cienciadatos --display-name "Pytho
 jupyter lab
 ```
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 7. Ejecución recomendada
 
@@ -261,6 +289,10 @@ Ejecutar todas las celdas desde el kernel:
 Python (ABP Ciencia Datos)
 ```
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 8. Flujo colaborativo
 
@@ -286,6 +318,10 @@ docs/actualizacion-readme
 fix/correccion-requirements
 ```
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 9. Pull Requests
 
@@ -308,6 +344,10 @@ El template de Pull Request se encuentra en:
 .github/pull_request_template.md
 ```
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 10. Convención de commits
 
@@ -331,6 +371,10 @@ git commit -m "feat: agrega exploracion inicial de calidad del aire"
 git commit -m "fix: resuelve conflicto de merge en README"
 ```
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 11. Validaciones recomendadas
 
@@ -350,6 +394,10 @@ Para notebooks:
 jupyter nbconvert --to notebook --execute calidad-aire-santiago/notebooks/01_exploracion.ipynb --output 01_exploracion_validado.ipynb
 ```
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 12. Buenas prácticas del repositorio
 
@@ -364,6 +412,10 @@ jupyter nbconvert --to notebook --execute calidad-aire-santiago/notebooks/01_exp
 - Usar nombres de archivos claros y consistentes.
 - Mantener `requirements.txt` actualizado.
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 13. Estado del proyecto
 
@@ -381,6 +433,10 @@ jupyter nbconvert --to notebook --execute calidad-aire-santiago/notebooks/01_exp
 | Diccionario de datos | Implementado |
 | Notebook exploratorio F3 | Implementado |
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 14. Comandos Git útiles
 
@@ -402,6 +458,10 @@ git push -u origin docs/actualizacion-readme-requirements
 
 Luego crear Pull Request hacia `main` o `develop`, según el flujo acordado por el equipo.
 
+<<<<<<< HEAD
+=======
+---
+>>>>>>> main
 
 ## 15. Licencia y uso académico
 
