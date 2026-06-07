@@ -118,9 +118,14 @@ Tabla: componente del mapa, evidencia implementada, archivo asociado y fase futu
 
 
 ## Bibliografia APA 7
-1. Python Software Foundation. (2024). Python 3.12 Documentation. https://docs.python.org/3.12/
-2. Project Jupyter. (2024). Jupyter Documentation. https://docs.jupyter.org/
-3. The Pandas Development Team. (2024). Pandas Documentation. https://pandas.pydata.org/docs/
-4. Harris, C. R., et al. (2020). Array programming with NumPy. Nature, 585(7825), 357-362.
-5. Pedregosa, F., et al. (2011). Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12, 2825-2830.
-6. Universidad Andrés Bello. (2026). Programación para la Ciencia – Material de apoyo y guía metodológica del curso.
+1. Ahumada, L., & Monchery, E. (2026). Semana 1: Introducción a la programación para la ciencia de datos y preparación de entornos reproducibles [Presentación de clase]. Magíster en Ciencia de Datos e Inteligencia Artificial, Universidad de las Américas.
+
+2. Chacon, S., & Straub, B. (2014). Pro Git (2nd ed.). Apress. https://git-scm.com/book/en/v2
+
+3. NumPy Developers. (2024). NumPy documentation. https://numpy.org/doc/stable/
+
+4. Scikit-learn developers. (2024). Preprocessing data — scikit-learn user guide. https://scikit-learn.org/stable/modules/preprocessing.html
+
+5. The pandas development team. (2024). pandas documentation. https://pandas.pydata.org/docs/
+
+6. Universidad de las Américas. (2026). MCDI500: Sumativa 1 - Avance del proyecto fase 1: Implementación inicial del entorno reproducible y documentación técnica [Material del curso]. Dirección de Escuela de Ingeniería, Magíster en Ciencia de Datos e Inteligencia Artificial.
