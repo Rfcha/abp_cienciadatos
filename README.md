@@ -422,3 +422,14 @@ Luego crear Pull Request hacia `main` o `develop`, según el flujo acordado por 
 ## 15. Licencia y uso académico
 
 Este repositorio tiene fines académicos y corresponde al desarrollo del proyecto ABP del Grupo 3 para el curso **MCDI500 — Programación para la Ciencia de Datos**.
+## Contribución SFA
+
+Mi contribución en esta fase del proyecto se orienta a fortalecer la comprensión del problema, la documentación metodológica y la interpretación de resultados desde potenciales perspectivas financieras y de gestión.
+
+Principales aportes:
+
+- Revisión del planteamiento del problema.
+- Apoyo en la interpretación de los datos.
+- Validación de supuestos metodológicos.
+- Revisión de coherencia entre objetivos, datos y resultados.
+- Documentación de conclusiones y recomendaciones.
