@@ -1,12 +1,25 @@
-numpy
-pandas
-matplotlib
-scikit-learn
-jupyterlab
-notebook
-ipykernel
-nbformat
-nbconvert
-jupytext
-nbstripout
-pytest
+#ﾠLibreríaﾠPara qué sirve
+
+1 numpy Cálculo numérico y operaciones con arrays/matrices.
+
+2 pandas Manejo y análisis de datos en tablas (DataFrames).
+
+3 matplotlib Creación de gráficos y visualizaciones.
+
+4 scikit-learn Machine learning: modelos, preprocesamiento, métricas.
+
+5 jupyterlab Entorno web para trabajar con notebooks.
+
+6 notebook Interfaz clásica de Jupyter Notebook.
+
+7 ipykernel Kernel de Python que ejecuta el código en los notebooks.
+
+8 nbformat Lee/escribe y valida el formato de los archivos .ipynb.
+
+9 nbconvert Convierte notebooks a otros formatos (PDF, HTML, etc.).
+
+10 jupytext Sincroniza notebooks con archivos .py/.md (mejor para Git).
+
+11 nbstripout Limpia las salidas de los notebooks antes de commitear (repos limpios).
+
+12 pytest Framework para escribir y ejecutar pruebas automatizadas
