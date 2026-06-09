@@ -118,7 +118,7 @@ Tabla: componente del mapa, evidencia implementada, archivo asociado y fase futu
 
 
 ## Bibliografia APA 7
-1. Ahumada, L., & Monchery, E. (2026). Semana 1: Introducción a la programación para la ciencia de datos y preparación de entornos reproducibles [Presentación de clase]. Magíster en Ciencia de Datos e Inteligencia Artificial, Universidad de las Américas.
+1. Ahumada, L., & Monchery, E. (2026). Semana 1: Introducción a la programación para la ciencia de datos y preparación de entornos reproducibles [Presentación de clase]. Magíster en Ciencia de Datos e Inteligencia Artificial, Universidad Andrés Bello.
 
 2. Chacon, S., & Straub, B. (2014). Pro Git (2nd ed.). Apress. https://git-scm.com/book/en/v2
 
@@ -128,4 +128,4 @@ Tabla: componente del mapa, evidencia implementada, archivo asociado y fase futu
 
 5. The pandas development team. (2024). pandas documentation. https://pandas.pydata.org/docs/
 
-6. Universidad de las Américas. (2026). MCDI500: Sumativa 1 - Avance del proyecto fase 1: Implementación inicial del entorno reproducible y documentación técnica [Material del curso]. Dirección de Escuela de Ingeniería, Magíster en Ciencia de Datos e Inteligencia Artificial.
+6. Universidad Andrés Bello. (2026). MCDI500: Sumativa 1 - Avance del proyecto fase 1: Implementación inicial del entorno reproducible y documentación técnica [Material del curso]. Dirección de Escuela de Ingeniería, Magíster en Ciencia de Datos e Inteligencia Artificial.
