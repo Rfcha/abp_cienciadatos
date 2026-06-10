@@ -33,13 +33,15 @@ El repositorio se organiza en tres proyectos principales:
 |---|---|---|
 | F1 | `F1/` | Definición inicial, entorno reproducible, documentación técnica y evidencias. |
 | F2 | `F2/` | Obtención, limpieza, transformación y preparación inicial de datos. |
-| F3 | `calidad-aire-santiago/` | Proyecto aplicado sobre calidad del aire en Santiago de Chile. |
+| F3 | `F3-calidad-aire-santiago/` | Proyecto aplicado sobre calidad del aire en Santiago de Chile. |
 
 ---
 
 ## 2. Proyecto F1 — Definición y entorno reproducible
 
 La carpeta `F1/` contiene la primera fase del proyecto, enfocada en establecer la base técnica, documental y metodológica.
+
+**Entregable principal de F1:** el notebook `F1/notebooks/F1_Definicion.ipynb`, que documenta la definición del problema, los objetivos, la validación del entorno reproducible y la vinculación con el mapa conceptual técnico. El informe formal de la fase está en `F1/docs/informe_sumativa1_Final.md`.
 
 ### Objetivos de F1
 
@@ -49,15 +51,18 @@ La carpeta `F1/` contiene la primera fase del proyecto, enfocada en establecer l
 - Registrar dependencias.
 - Dejar evidencia del trabajo colaborativo en GitHub.
 
-### Estructura esperada
+### Estructura real
 
 ```text
 F1/
-├── data/
-├── docs/
+├── data/                       # datos crudos y procesados de la fase
+├── docs/                       # informe_sumativa1_Final.md + PDF de la sumativa
 ├── evidencias/
 ├── notebooks/
+│   └── F1_Definicion.ipynb     # entregable principal de F1
 ├── src/
+│   ├── f1_utils.py             # funciones de captura y validación del entorno
+│   └── utils.py
 ├── README.md
 └── requirements.txt
 ```
@@ -68,6 +73,8 @@ F1/
 
 La carpeta `F2/` contiene la segunda fase del proyecto, enfocada en el tratamiento inicial de los datos.
 
+**Entregable principal de F2:** el notebook `F2/notebooks/F2_Preprocesamiento.ipynb`, que orquesta y documenta el pipeline de preprocesamiento, apoyado en el módulo `F2/src/preprocessing.py`.
+
 ### Objetivos de F2
 
 - Obtener o cargar datos desde fuentes definidas.
@@ -77,15 +84,19 @@ La carpeta `F2/` contiene la segunda fase del proyecto, enfocada en el tratamien
 - Generar salidas reproducibles en `data/processed/`.
 - Documentar decisiones técnicas.
 
-### Estructura esperada
+### Estructura real
 
 ```text
 F2/
 ├── data/
-├── docs/
+│   ├── raw/dataset_base.csv           # dataset crudo con defectos deliberados
+│   └── processed/dataset_procesado.csv # salida del pipeline
+├── docs/                              # aporte_metodologico_f2_SFA.md + informe
 ├── evidencias/
 ├── notebooks/
+│   └── F2_Preprocesamiento.ipynb      # entregable principal de F2
 ├── src/
+│   └── preprocessing.py               # load, profile, clean, transform, validate
 ├── README.md
 └── requirements.txt
 ```
@@ -94,7 +105,7 @@ F2/
 
 ## 4. Proyecto F3 — Calidad del Aire en Santiago
 
-La carpeta `calidad-aire-santiago/` corresponde al proyecto aplicado del repositorio.
+La carpeta `F3-calidad-aire-santiago/` corresponde al proyecto aplicado del repositorio.
 
 Este proyecto busca analizar datos asociados a la calidad del aire en Santiago de Chile, considerando una estructura reproducible de ciencia de datos.
 
@@ -109,7 +120,7 @@ Este proyecto busca analizar datos asociados a la calidad del aire en Santiago d
 ### Estructura actual
 
 ```text
-calidad-aire-santiago/
+F3-calidad-aire-santiago/
 ├── data/
 │   ├── raw/
 │   └── processed/
@@ -131,8 +142,7 @@ calidad-aire-santiago/
 ABP_CIENCIADATOS/
 ├── .github/
 │   └── pull_request_template.md
-├── .venv/
-├── calidad-aire-santiago/
+├── F3-calidad-aire-santiago/
 │   ├── data/
 │   │   ├── raw/
 │   │   └── processed/
@@ -154,8 +164,6 @@ ABP_CIENCIADATOS/
 │   ├── flujo_colaborativo.md
 │   └── .gitkeep
 ├── F1/
-│   ├── .ruff_cache/
-│   ├── .venv/
 │   ├── data/
 │   ├── docs/
 │   ├── evidencias/
@@ -165,7 +173,6 @@ ABP_CIENCIADATOS/
 │   ├── README.md
 │   └── requirements.txt
 ├── F2/
-│   ├── .ruff_cache/
 │   ├── data/
 │   ├── docs/
 │   ├── evidencias/
@@ -175,12 +182,15 @@ ABP_CIENCIADATOS/
 │   └── requirements.txt
 ├── logs/
 ├── .gitignore
+├── .mailmap
+├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
+├── LICENSE
 ├── README.md
 └── requirements.txt
 ```
 
-> Nota técnica: las carpetas `.venv/` y `.ruff_cache/` pueden existir localmente, pero no deberían versionarse en Git. Deben quedar excluidas mediante `.gitignore`.
+> Nota técnica: las carpetas `.venv/` y `.ruff_cache/` existen únicamente en el entorno local y **no se versionan** en Git. Están correctamente excluidas mediante `.gitignore` (verificable con `git ls-files .venv`, que no devuelve resultados).
 
 ---
 
@@ -203,7 +213,7 @@ python -m venv .venv
 Si PowerShell bloquea la ejecución de scripts:
 
 ```powershell
-Set-ExecutionPolicy -Scope Process Bypass -Force
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
 .\.venv\Scripts\Activate.ps1
 ```
 
@@ -240,7 +250,7 @@ jupyter lab
 Abrir los notebooks y documentos ubicados en:
 
 ```text
-F1/notebooks/
+F1/notebooks/F1_Definicion.ipynb
 F1/docs/
 F1/evidencias/
 ```
@@ -250,7 +260,7 @@ F1/evidencias/
 Abrir los notebooks y scripts ubicados en:
 
 ```text
-F2/notebooks/
+F2/notebooks/F2_Preprocesamiento.ipynb
 F2/src/
 F2/data/
 ```
@@ -260,7 +270,7 @@ F2/data/
 Abrir:
 
 ```text
-calidad-aire-santiago/notebooks/01_exploracion.ipynb
+F3-calidad-aire-santiago/notebooks/01_exploracion.ipynb
 ```
 
 Ejecutar todas las celdas desde el kernel:
@@ -271,35 +281,66 @@ Python (ABP Ciencia Datos)
 
 ---
 
-## 8. Flujo colaborativo
+## 8. Contribución del equipo
+
+La participación de cada integrante se evidencia mediante los commits individuales registrados en el historial de Git. Durante el desarrollo, el equipo se encontraba en proceso de aprendizaje de Git/GitHub, lo que derivó en configuraciones locales inconsistentes del parámetro `user.name`, generando que un mismo colaborador apareciera bajo múltiples identidades en el historial. Para consolidar la trazabilidad individual, se aplicó un archivo `.mailmap` que normaliza las identidades **sin alterar el historial de commits**. GitHub identifica correctamente a los tres colaboradores reales (sección Contributors).
+
+### 8.1 Contribución por fase
+
+**Fase 1 — Definición y entorno reproducible** (37 commits)
+
+| Integrante | Commits | Participación |
+|---|---|---|
+| Rodrigo Chinchón Ayala | 22 | 59% |
+| Pablo Villalobos González | 12 | 32% |
+| Sergio Fernández Almonacid | 3 | 8% |
+
+**Fase 2 — Preprocesamiento de datos** (29 commits)
+
+| Integrante | Commits | Participación |
+|---|---|---|
+| Rodrigo Chinchón Ayala | 19 | 66% |
+| Sergio Fernández Almonacid | 8 | 28% |
+| Pablo Villalobos González | 2 | 7% |
+
+### 8.2 Aportes principales por integrante
+
+- **Rodrigo Chinchón Ayala:** estructura del repositorio, configuración del entorno reproducible, diseño y orquestación del pipeline de F2, módulos en `src/` y desarrollo de los notebooks.
+- **Pablo Villalobos González:** documentación técnica de F1, desarrollo de la definición del problema y apoyo en la exploración inicial de datos.
+- **Sergio Fernández Almonacid:** aporte metodológico (`aporte_metodologico_f2_SFA.md`), revisión del planteamiento del problema, validación de supuestos metodológicos y coherencia entre objetivos, datos y resultados desde perspectivas de gestión.
+
+> El conteo de commits se obtuvo con `git shortlog -s -n -e --all -- F1` y `-- F2`, con las identidades consolidadas vía `.mailmap`.
+
+---
+
+## 9. Flujo colaborativo
 
 El repositorio utiliza un flujo colaborativo basado en ramas, Pull Requests y revisión entre integrantes.
 
-### 8.1 Ramas principales
+### 9.1 Ramas principales
 
 | Rama | Uso |
 |---|---|
-| `main` | Rama estable. Solo debe contener versiones revisadas. |
+| `main` | Rama estable y protegida. Solo contiene versiones revisadas e integradas vía Pull Request. |
 | `develop` | Integración del trabajo del equipo antes de pasar a `main`. |
 | `feature/*` | Desarrollo de tareas específicas por integrante. |
 | `fix/*` | Correcciones puntuales. |
 | `docs/*` | Cambios documentales. |
 
-### 8.2 Ejemplos de ramas
+### 9.2 Ejemplos de ramas
 
 ```text
 feature/f1-entorno-reproducible
 feature/f2-limpieza-datos
-feature/f3-exploracion-calidad-aire
 docs/actualizacion-readme
 fix/correccion-requirements
 ```
 
 ---
 
-## 9. Pull Requests
+## 10. Pull Requests
 
-Todo cambio relevante debe integrarse mediante Pull Request.
+Todo cambio relevante debe integrarse mediante Pull Request. La rama `main` está protegida y no admite push directo.
 
 ### Criterios mínimos de un Pull Request
 
@@ -320,7 +361,7 @@ El template de Pull Request se encuentra en:
 
 ---
 
-## 10. Convención de commits
+## 11. Convención de commits
 
 Se utiliza una convención simple y profesional basada en commits semánticos.
 
@@ -333,18 +374,9 @@ Se utiliza una convención simple y profesional basada en commits semánticos.
 | `test` | Pruebas | `test: agrega validaciones de carga de datos` |
 | `chore` | Mantención | `chore: actualiza requirements` |
 
-### Ejemplos recomendados
-
-```bash
-git commit -m "docs: actualiza README principal con F1 F2 y F3"
-git commit -m "chore: actualiza dependencias reproducibles"
-git commit -m "feat: agrega exploracion inicial de calidad del aire"
-git commit -m "fix: resuelve conflicto de merge en README"
-```
-
 ---
 
-## 11. Validaciones recomendadas
+## 12. Validaciones recomendadas
 
 Antes de hacer commit o Pull Request:
 
@@ -359,12 +391,12 @@ ruff check .
 Para notebooks:
 
 ```powershell
-jupyter nbconvert --to notebook --execute calidad-aire-santiago/notebooks/01_exploracion.ipynb --output 01_exploracion_validado.ipynb
+jupyter nbconvert --to notebook --execute F3-calidad-aire-santiago/notebooks/01_exploracion.ipynb --output 01_exploracion_validado.ipynb
 ```
 
 ---
 
-## 12. Buenas prácticas del repositorio
+## 13. Buenas prácticas del repositorio
 
 - No versionar `.venv/`.
 - No versionar `.ruff_cache/`.
@@ -379,7 +411,7 @@ jupyter nbconvert --to notebook --execute calidad-aire-santiago/notebooks/01_exp
 
 ---
 
-## 13. Estado del proyecto
+## 14. Estado del proyecto
 
 | Componente | Estado |
 |---|---|
@@ -387,49 +419,17 @@ jupyter nbconvert --to notebook --execute calidad-aire-santiago/notebooks/01_exp
 | README principal | Actualizado |
 | `requirements.txt` principal | Actualizado |
 | F1 | Implementado |
-| F2 | Implementado / en evolución |
-| F3 `calidad-aire-santiago` | Implementado / en evolución |
+| F2 | Implementado |
+| F3 `F3-calidad-aire-santiago` | En evolución |
 | Pull Request template | Implementado |
 | Flujo colaborativo | Documentado |
 | Entorno reproducible | Documentado |
+| Consolidación de autoría (`.mailmap`) | Implementado |
 | Diccionario de datos | Implementado |
 | Notebook exploratorio F3 | Implementado |
 
 ---
 
-## 14. Comandos Git útiles
-
-```powershell
-git status
-git add README.md requirements.txt
-git commit -m "docs: actualiza README principal y requirements"
-git push origin main
-```
-
-Si se trabaja con rama:
-
-```powershell
-git checkout -b docs/actualizacion-readme-requirements
-git add README.md requirements.txt
-git commit -m "docs: actualiza README principal y requirements"
-git push -u origin docs/actualizacion-readme-requirements
-```
-
-Luego crear Pull Request hacia `main` o `develop`, según el flujo acordado por el equipo.
-
----
-
 ## 15. Licencia y uso académico
 
-Este repositorio tiene fines académicos y corresponde al desarrollo del proyecto ABP del Grupo 3 para el curso **MCDI500 — Programación para la Ciencia de Datos**.
-## Contribución SFA
-
-Mi contribución en esta fase del proyecto se orienta a fortalecer la comprensión del problema, la documentación metodológica y la interpretación de resultados desde potenciales perspectivas financieras y de gestión.
-
-Principales aportes:
-
-- Revisión del planteamiento del problema.
-- Apoyo en la interpretación de los datos.
-- Validación de supuestos metodológicos.
-- Revisión de coherencia entre objetivos, datos y resultados.
-- Documentación de conclusiones y recomendaciones.
+Este repositorio tiene fines académicos y corresponde al desarrollo del proyecto ABP del Grupo 3 para el curso **MCDI500 — Programación para la Ciencia de Datos**. La licencia se encuentra en el archivo `LICENSE`.
