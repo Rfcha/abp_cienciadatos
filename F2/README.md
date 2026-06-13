@@ -1,52 +1,60 @@
-<<<<<<< HEAD
 # Fase 2 — Obtención, limpieza y transformación de datos
 
-Pipeline reproducible de preprocesamiento sobre un dataset de cartera de clientes.
+Pipeline reproducible de preprocesamiento de datos, dentro del marco del ABP de
+Ciencia de Datos Reproducible (MCDI500 — UNAB).
 
 ## Contenido
+
 - `notebooks/F2_Preprocesamiento.ipynb`: orquestación y documentación del pipeline.
 - `src/preprocessing.py`: funciones del pipeline (load, profile, clean, transform, validate, run_pipeline).
 - `data/raw/dataset_base.csv`: dataset crudo con defectos deliberados (nulos, duplicados, texto inconsistente).
-- `data/processed/`: dataset procesado (se genera al ejecutar).
+- `data/processed/dataset_procesado.csv`: dataset procesado (se genera al ejecutar el pipeline).
+- `docs/`: documentación de la fase, incluye `aporte_metodologico_f2_SFA.md` y el informe de la sumativa.
+
+## Pipeline técnico
+
+1. Obtención y exploración inicial (perfilado de tipos, nulos, duplicados y cardinalidad).
+2. Limpieza: eliminación de duplicados, casting, imputación con mediana, normalización textual.
+3. Transformación: normalización MinMax de variables numéricas y One Hot Encoding de categóricas.
+4. Validación técnica: casos normales, límite y excepciones; ausencia de nulos y duplicados; salida trazable.
+5. Persistencia del dataset procesado en `data/processed/dataset_procesado.csv`.
 
 ## Ejecución
-Desde la raíz del repositorio, con el entorno activado:
+
+Desde la raíz del repositorio, con el entorno virtual activado:
+
 ```bash
-jupyter notebook F2/notebooks/F2_Preprocesamiento.ipynb
+# macOS / Linux
+source .venv/bin/activate
+jupyter lab F2/notebooks/F2_Preprocesamiento.ipynb
 ```
-Ejecutar todas las celdas (Restart & Run All). No produce errores.
 
-## Pipeline
-1. Obtención y exploración inicial (perfilado de nulos/duplicados).
-2. Limpieza: duplicados, casting, imputación con mediana, normalización textual.
-3. Transformación: normalización MinMax + One Hot Encoding.
-4. Validación técnica: casos normales, límite y excepciones.
-5. Persistencia del dataset procesado.
-=======
-# Fase 2 - Notebook de obtencion, limpieza y transformacion de datos
-
-## Proposito
-Implementar un pipeline inicial y reproducible de obtencion, limpieza, depuracion, transformacion y validacion de datos usando Python, NumPy, Pandas y scikit-learn.
-
-## Dataset
-Archivo base: data/raw/dataset_base.csv  
-Archivo procesado esperado: data/processed/dataset_procesado.csv
-
-> Reemplazar el dataset demo por el dataset definitivo del grupo si corresponde. Debe contener variables numericas y categoricas.
-
-## Pipeline tecnico
-
-1. Obtencion/carga de datos.
-2. Perfilamiento inicial: tipos, nulos, duplicados, cardinalidad.
-3. Limpieza: duplicados, nulos, casting y consistencia.
-4. Transformacion: normalizacion de variables numericas y encoding de categoricas.
-5. Validacion: integridad, ausencia de nulos, duplicados y salida final trazable.
-
-## Ejecucion
-
-``powershell
-cd "D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos"
+```powershell
+# Windows
 .\.venv\Scripts\Activate.ps1
 jupyter lab F2\notebooks\F2_Preprocesamiento.ipynb
-``
->>>>>>> 10a630b32eaf59ab6dc8927cdba17bbf7caf4d8b
+```
+
+Ejecutar todas las celdas (Restart & Run All). No debe producir errores.
+
+## Dependencias
+
+numpy, pandas, scikit-learn, jupyter y utilidades de notebook (ver `requirements.txt`).
+
+## Contribución del equipo en la Fase 2
+
+La participación se evidencia mediante los commits individuales registrados en el
+historial de Git (identidades consolidadas vía `.mailmap`; ver README principal).
+
+| Integrante | Commits en F2 | Participación |
+|---|---|---|
+| Rodrigo Chinchón Ayala | 19 | 66% |
+| Sergio Fernández Almonacid | 8 | 28% |
+| Pablo Villalobos González | 2 | 7% |
+| **Total** | **29** | **100%** |
+
+Aportes principales por integrante:
+
+- **Rodrigo Chinchón Ayala**: diseño y orquestación del pipeline, módulo `preprocessing.py`, notebook de preprocesamiento y validación técnica.
+- **Sergio Fernández Almonacid**: aporte metodológico (`aporte_metodologico_f2_SFA.md`) y revisión de la limpieza y transformación de datos.
+- **Pablo Villalobos González**: apoyo en la exploración inicial y documentación del dataset.

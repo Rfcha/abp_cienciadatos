@@ -1,0 +1,20 @@
+# Proyecto ABP — Calidad del aire en Santiago (F3) · MCDI500 · Grupo 3
+# Dependencias del entorno reproducible.
+# Instalar con: python -m pip install -r requirements.txt
+
+# --- Núcleo de análisis de datos ---
+pandas==2.2.2
+numpy==1.26.4
+matplotlib==3.8.4
+
+# --- Entorno Jupyter ---
+jupyter==1.0.0
+jupyterlab==4.2.5
+ipykernel==6.29.5
+
+# --- Calidad de código (opcional, recomendado para validaciones) ---
+ruff==0.6.9
+
+# Nota: timeit forma parte de la biblioteca estándar de Python; no requiere
+# instalación. El núcleo algorítmico (02_algoritmos.ipynb) solo usa pandas,
+# numpy y la biblioteca estándar.

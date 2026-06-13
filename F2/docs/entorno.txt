@@ -8,4 +8,4 @@ matplotlib==3.10.9
 jupyterlab==4.5.7
 notebook==7.5.6
 ipykernel==7.2.0
-Prueba de commit f1
+Prueba de commit f2

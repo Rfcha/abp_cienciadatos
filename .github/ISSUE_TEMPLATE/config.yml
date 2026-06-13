@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Pregunta general del equipo
+    url: https://github.com/Rfcha/abp_cienciadatos/discussions
+    about: Para preguntas generales, usa Discussions en lugar de un Issue.
