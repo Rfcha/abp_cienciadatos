@@ -67,6 +67,15 @@ Este proyecto aplicado se desarrolla en notebooks sucesivos dentro de
 > `F2/` del repositorio. La carpeta `F2/` corresponde a una sumativa previa del
 > curso con un dataset genérico, sin relación con los datos del SINCA.
 
+## Arquitectura de Software y Objetos (Fase 3)
+
+El sistema ha sido migrado desde un paradigma procedimental hacia una arquitectura basada en **Programación Orientada a Objetos (POO)** para asegurar un flujo de trabajo altamente mantenible y extensible:
+
+- **`PreprocesadorAire` (limpieza.py):** Encapsula los criterios de carga e integridad referencial del dataset crudo de la red SINCA.
+- **`Contaminante` (Clase Base):** Abstrae las variables normativas y límites críticos medioambientales chilenos.
+- **`AnalizadorMP25` (Subclase):** Hereda las propiedades del contaminante y expone de forma exclusiva el núcleo algorítmico optimizado (`merge_sort_recursivo` y `busqueda_binaria_recursiva`).
+
+
 ## Estructura del repositorio
 
 ```text
@@ -130,11 +139,10 @@ de 50 µg/m³:
 - `timeit` (biblioteca estándar) para mediciones de complejidad
 - Git / GitHub para control de versiones y colaboración
 
-## Referencias
+## Referencias (APA 7.ª Edición)
 
-- Ministerio del Medio Ambiente. (2024). *Sistema de Información Nacional de
-  Calidad del Aire (SINCA)*. https://sinca.mma.gob.cl
-- McKinney, W. (2022). *Python for Data Analysis* (3.ª ed.). O'Reilly Media.
-- The pandas development team. (2024). *pandas documentation*. https://pandas.pydata.org/docs/
-- Python Software Foundation. (2024). *The Python standard library — timeit*. https://docs.python.org/3/library/timeit.html
 - Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). *Introduction to algorithms* (4.ª ed.). MIT Press.
+- Harris, C. R., Millman, K. J., van der Walt, S. J., Gommers, R., Virtanen, P., Cournapeau, D., ... & Oliphant, T. E. (2020). Array programming with NumPy. *Nature*, 585(7825), 357-362.
+- McKinney, W. (2022). *Python for Data Analysis* (3.ª ed.). O'Reilly Media.
+- Ministerio del Medio Ambiente. (2024). *Sistema de Información Nacional de Calidad del Aire (SINCA)*. https://sinca.mma.gob.cl
+- Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., ... & Duchesnay, É. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, 12, 2825-2830.
