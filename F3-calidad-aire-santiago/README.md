@@ -1,21 +1,23 @@
 # Calidad del aire en Santiago
 
-Proyecto transversal — MCDI500. Análisis de la calidad del aire en Santiago y su
-relación con variables meteorológicas, para anticipar episodios críticos de
-contaminación por material particulado (MP2.5 / MP10).
+Proyecto aplicado — MCDI500. Análisis de la relación entre variables
+meteorológicas y los episodios críticos de contaminación por material particulado
+(MP2.5 / MP10) en la Región Metropolitana, con un flujo reproducible de ciencia de
+datos que abarca exploración, preprocesamiento y un núcleo algorítmico.
 
 ## Integrantes (Grupo 3)
 
-- RODRIGO CHINCHÓN AYALA
-- SERGIO FERNANDEZ ALMONACID
-- PABLO VILLALOBOS GONZALEZ
+- Rodrigo Chinchón Ayala
+- Sergio Fernández Almonacid
+- Pablo Villalobos González
 
 ## Problema
 
 ¿Qué condiciones meteorológicas anticipan un episodio crítico de contaminación
 por material particulado en Santiago? El proyecto identifica las condiciones
 (temperatura, viento, presión, inversión térmica) asociadas a las horas en que
-el MP2.5 supera el umbral crítico, para anticipar dichos episodios.
+el MP2.5 supera el umbral crítico, y desarrolla algoritmos para detectar y
+caracterizar esos episodios de forma eficiente.
 
 ## Datos
 
@@ -49,50 +51,98 @@ Fuente: https://sinca.mma.gob.cl
 > en `data/raw/` para facilitar la revisión de la entrega; la regla
 > correspondiente queda comentada en `.gitignore`.
 
+## Fases del proyecto
+
+Este proyecto aplicado se desarrolla en notebooks sucesivos dentro de
+`notebooks/`, cada uno construyendo sobre el anterior:
+
+| Notebook | Contenido | Apartados de rúbrica |
+|---|---|---|
+| `01_exploracion.ipynb` | Carga, limpieza, definición del episodio crítico, panel exploratorio, correlaciones y conclusiones preliminares. | Exploración y preprocesamiento. |
+| `02_algoritmos.ipynb` | Núcleo algorítmico: funciones modulares, algoritmos recursivos (búsqueda binaria y merge sort), mediciones de complejidad con `timeit`, clase `AnalizadorAire` y documentación de arquitectura. | Codificación funcional, eficiencia, modularidad, recursividad. |
+
+> **Procedencia del dataset para el análisis algorítmico:** el notebook
+> `02_algoritmos.ipynb` parte del dataset procesado **de este mismo proyecto**
+> (`data/processed/sinca_limpio.csv`), no del dataset de práctica de la carpeta
+> `F2/` del repositorio. La carpeta `F2/` corresponde a una sumativa previa del
+> curso con un dataset genérico, sin relación con los datos del SINCA.
+
+## Arquitectura de Software y Objetos (Fase 3)
+
+El sistema ha sido migrado desde un paradigma procedimental hacia una arquitectura basada en **Programación Orientada a Objetos (POO)** para asegurar un flujo de trabajo altamente mantenible y extensible:
+
+- **`PreprocesadorAire` (limpieza.py):** Encapsula los criterios de carga e integridad referencial del dataset crudo de la red SINCA.
+- **`Contaminante` (Clase Base):** Abstrae las variables normativas y límites críticos medioambientales chilenos.
+- **`AnalizadorMP25` (Subclase):** Hereda las propiedades del contaminante y expone de forma exclusiva el núcleo algorítmico optimizado (`merge_sort_recursivo` y `busqueda_binaria_recursiva`).
+
+
 ## Estructura del repositorio
 
-\`\`\`
-calidad-aire-santiago/
-├── README.md              Descripción del proyecto
-├── requirements.txt       Dependencias de Python
-├── .gitignore             Archivos ignorados por Git
+```text
+F3-calidad-aire-santiago/
+├── README.md                  Descripción del proyecto
+├── requirements.txt           Dependencias de Python
+├── .gitignore                 Archivos ignorados por Git
 ├── data/
-│   ├── raw/               CSV originales del SINCA
-│   └── processed/         Datos limpios listos para análisis
+│   ├── raw/                   CSV originales del SINCA
+│   │   └── sinca_santiago.csv
+│   └── processed/             Datos limpios listos para análisis
+│       └── sinca_limpio.csv
 ├── notebooks/
-│   └── 01_exploracion.ipynb   Exploración inicial de los datos
+│   ├── 01_exploracion.ipynb   Exploración inicial de los datos
+│   └── 02_algoritmos.ipynb    Núcleo algorítmico (Fase 3)
 ├── src/
-│   └── limpieza.py        Funciones de carga y limpieza
+│   ├── limpieza.py            Funciones de carga y limpieza
+│   └── algoritmos.py          Funciones algorítmicas reutilizables (opcional)
 └── docs/
     ├── diccionario_datos.md   Descripción de las variables
     └── referencias.md         Referencias en formato APA
-\`\`\`
+```
 
 ## Cómo reproducir el análisis
 
-\`\`\`bash
-git clone https://github.com/usuario/calidad-aire-santiago.git
-cd calidad-aire-santiago
+```bash
+git clone https://github.com/usuario/abp_cienciadatos.git
+cd abp_cienciadatos/F3-calidad-aire-santiago
 python -m venv .venv
 source .venv/bin/activate      # En Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-jupyter notebook notebooks/01_exploracion.ipynb
-\`\`\`
+jupyter lab
+```
+
+Ejecutar los notebooks en orden (`01_exploracion.ipynb` → `02_algoritmos.ipynb`)
+con `Restart & Run All`.
 
 El CSV usa punto y coma como separador y coma decimal (formato SINCA):
 
-\`\`\`python
-df = pd.read_csv('../data/raw/sinca_santiago.csv',
+```python
+df = pd.read_csv('data/raw/sinca_santiago.csv',
                  sep=';', decimal=',', encoding='latin-1')
-\`\`\`
+```
+
+## Núcleo algorítmico (Fase 3)
+
+El notebook `02_algoritmos.ipynb` implementa, sobre la columna MP2.5 y el umbral
+de 50 µg/m³:
+
+- **Búsqueda binaria recursiva** del primer cruce del umbral — O(log n).
+- **Merge sort recursivo** de las concentraciones — O(n log n).
+- **Detección de episodios como rachas** de horas consecutivas sobre el umbral.
+- **Dos comparaciones de complejidad** con `timeit`: búsqueda lineal vs binaria, y
+  bucle Python vs operación vectorizada.
+- **Clase `AnalizadorAire`** que encapsula datos, umbral y métodos de análisis.
 
 ## Herramientas
 
 - Python 3.11 (pandas, numpy, matplotlib)
-- Jupyter Notebooks
+- Jupyter Lab / Notebooks
+- `timeit` (biblioteca estándar) para mediciones de complejidad
 - Git / GitHub para control de versiones y colaboración
 
-## Referencia
+## Referencias (APA 7.ª Edición)
 
-Ministerio del Medio Ambiente. (2024). *Sistema de Información Nacional de
-Calidad del Aire (SINCA)*. https://sinca.mma.gob.cl
+- Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). *Introduction to algorithms* (4.ª ed.). MIT Press.
+- Harris, C. R., Millman, K. J., van der Walt, S. J., Gommers, R., Virtanen, P., Cournapeau, D., ... & Oliphant, T. E. (2020). Array programming with NumPy. *Nature*, 585(7825), 357-362.
+- McKinney, W. (2022). *Python for Data Analysis* (3.ª ed.). O'Reilly Media.
+- Ministerio del Medio Ambiente. (2024). *Sistema de Información Nacional de Calidad del Aire (SINCA)*. https://sinca.mma.gob.cl
+- Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., ... & Duchesnay, É. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, 12, 2825-2830.

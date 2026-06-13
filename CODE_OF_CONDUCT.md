@@ -24,4 +24,4 @@ Ejemplos de comportamiento inaceptable:
 
 Los casos de comportamiento abusivo o inaceptable pueden reportarse contactando al equipo del proyecto. Todas las quejas serán revisadas e investigadas de forma justa.
 
-Este Código de Conducta es una adaptación del Contributor Covenant (https://www.contributor-covenant.org), versión 2.1.
+Este Código de Conducta es una adaptación del Contributor Covenant (https://www.contributor-covenant.org), versión 2.1. 

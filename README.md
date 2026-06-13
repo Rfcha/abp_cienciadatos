@@ -25,15 +25,19 @@ El objetivo principal es construir un proyecto de ciencia de datos reproducible,
 - creación de entornos reproducibles;
 - análisis exploratorio de datos;
 - limpieza, transformación y preparación de datasets;
+- diseño e implementación de algoritmos estructurados y recursivos;
+- medición de complejidad y eficiencia;
 - documentación técnica y académica del proceso.
 
 El repositorio se organiza en tres proyectos principales:
 
 | Proyecto | Carpeta | Propósito |
 |---|---|---|
-| F1 | `F1/` | Definición inicial, entorno reproducible, documentación técnica y evidencias. |
-| F2 | `F2/` | Obtención, limpieza, transformación y preparación inicial de datos. |
-| F3 | `F3-calidad-aire-santiago/` | Proyecto aplicado sobre calidad del aire en Santiago de Chile. |
+| F1 | `F1/` | Definición inicial, entorno reproducible, documentación técnica y evidencias (sumativa del curso, dataset de práctica). |
+| F2 | `F2/` | Obtención, limpieza, transformación y preparación inicial de datos (sumativa del curso, dataset de práctica con defectos deliberados). |
+| F3 | `F3-calidad-aire-santiago/` | Proyecto aplicado sobre calidad del aire en Santiago de Chile, con datos del SINCA. Incluye exploración y núcleo algorítmico. |
+
+> **Nota sobre la organización:** las carpetas `F1/` y `F2/` corresponden a las **sumativas previas del curso**, desarrolladas sobre datasets de práctica genéricos. El **proyecto aplicado real** del grupo es `F3-calidad-aire-santiago/`, que trabaja con datos del SINCA y contiene su propio flujo completo de preprocesamiento, exploración y análisis algorítmico. El dataset base para el análisis algorítmico de la Fase 3 es el procesado del propio proyecto SINCA (`F3-calidad-aire-santiago/data/processed/`), no el de la carpeta `F2/`.
 
 ---
 
@@ -105,17 +109,19 @@ F2/
 
 ## 4. Proyecto F3 — Calidad del Aire en Santiago
 
-La carpeta `F3-calidad-aire-santiago/` corresponde al proyecto aplicado del repositorio.
+La carpeta `F3-calidad-aire-santiago/` corresponde al **proyecto aplicado** del repositorio, desarrollado sobre datos del SINCA (Sistema de Información Nacional de Calidad del Aire).
 
-Este proyecto busca analizar datos asociados a la calidad del aire en Santiago de Chile, considerando una estructura reproducible de ciencia de datos.
+Este proyecto analiza la relación entre variables meteorológicas y los episodios críticos de contaminación por material particulado (MP2.5) en Santiago, con una estructura reproducible de ciencia de datos. La Fase 3 incorpora, sobre la exploración previa, un **núcleo algorítmico** con funciones modulares, algoritmos recursivos y mediciones de complejidad.
 
 ### Objetivos de F3
 
-- Explorar datos de calidad del aire.
+- Explorar datos de calidad del aire del SINCA.
 - Organizar datos crudos y procesados.
 - Documentar el diccionario de datos.
 - Ejecutar análisis exploratorio mediante Jupyter Notebook.
-- Preparar la base para análisis posteriores, visualización y conclusiones.
+- Diseñar e implementar algoritmos estructurados y recursivos (búsqueda binaria, merge sort).
+- Medir y comparar la complejidad de las implementaciones con `timeit`.
+- Documentar la arquitectura del código y su proyección a fases posteriores.
 
 ### Estructura actual
 
@@ -123,12 +129,17 @@ Este proyecto busca analizar datos asociados a la calidad del aire en Santiago d
 F3-calidad-aire-santiago/
 ├── data/
 │   ├── raw/
+│   │   └── sinca_santiago.csv         # dataset horario del SINCA (RM, 2022-2023)
 │   └── processed/
+│       └── sinca_limpio.csv           # salida del preprocesamiento
 ├── docs/
 │   └── diccionario_datos.md
 ├── notebooks/
-│   └── 01_exploracion.ipynb
+│   ├── 01_exploracion.ipynb           # exploración y conclusiones preliminares
+│   └── 02_algoritmos.ipynb            # núcleo algorítmico (Fase 3)
 ├── src/
+│   ├── limpieza.py                    # carga y limpieza
+│   └── algoritmos.py                  # funciones algorítmicas reutilizables (opcional)
 ├── .gitignore
 ├── README.md
 └── requirements.txt
@@ -149,7 +160,8 @@ ABP_CIENCIADATOS/
 │   ├── docs/
 │   │   └── diccionario_datos.md
 │   ├── notebooks/
-│   │   └── 01_exploracion.ipynb
+│   │   ├── 01_exploracion.ipynb
+│   │   └── 02_algoritmos.ipynb
 │   ├── src/
 │   ├── .gitignore
 │   ├── README.md
@@ -247,8 +259,6 @@ jupyter lab
 
 ### F1
 
-Abrir los notebooks y documentos ubicados en:
-
 ```text
 F1/notebooks/F1_Definicion.ipynb
 F1/docs/
@@ -256,8 +266,6 @@ F1/evidencias/
 ```
 
 ### F2
-
-Abrir los notebooks y scripts ubicados en:
 
 ```text
 F2/notebooks/F2_Preprocesamiento.ipynb
@@ -267,10 +275,11 @@ F2/data/
 
 ### F3 — Calidad del Aire Santiago
 
-Abrir:
+Abrir, en orden:
 
 ```text
 F3-calidad-aire-santiago/notebooks/01_exploracion.ipynb
+F3-calidad-aire-santiago/notebooks/02_algoritmos.ipynb
 ```
 
 Ejecutar todas las celdas desde el kernel:
@@ -303,13 +312,13 @@ La participación de cada integrante se evidencia mediante los commits individua
 | Sergio Fernández Almonacid | 8 | 28% |
 | Pablo Villalobos González | 2 | 7% |
 
+> El conteo de commits se obtuvo con `git shortlog -s -n -e --all -- F1` y `-- F2`, con las identidades consolidadas vía `.mailmap`.
+
 ### 8.2 Aportes principales por integrante
 
 - **Rodrigo Chinchón Ayala:** estructura del repositorio, configuración del entorno reproducible, diseño y orquestación del pipeline de F2, módulos en `src/` y desarrollo de los notebooks.
 - **Pablo Villalobos González:** documentación técnica de F1, desarrollo de la definición del problema y apoyo en la exploración inicial de datos.
 - **Sergio Fernández Almonacid:** aporte metodológico (`aporte_metodologico_f2_SFA.md`), revisión del planteamiento del problema, validación de supuestos metodológicos y coherencia entre objetivos, datos y resultados desde perspectivas de gestión.
-
-> El conteo de commits se obtuvo con `git shortlog -s -n -e --all -- F1` y `-- F2`, con las identidades consolidadas vía `.mailmap`.
 
 ---
 
@@ -332,6 +341,7 @@ El repositorio utiliza un flujo colaborativo basado en ramas, Pull Requests y re
 ```text
 feature/f1-entorno-reproducible
 feature/f2-limpieza-datos
+feature/f3-algoritmos
 docs/actualizacion-readme
 fix/correccion-requirements
 ```
@@ -392,6 +402,7 @@ Para notebooks:
 
 ```powershell
 jupyter nbconvert --to notebook --execute F3-calidad-aire-santiago/notebooks/01_exploracion.ipynb --output 01_exploracion_validado.ipynb
+jupyter nbconvert --to notebook --execute F3-calidad-aire-santiago/notebooks/02_algoritmos.ipynb --output 02_algoritmos_validado.ipynb
 ```
 
 ---
@@ -420,13 +431,15 @@ jupyter nbconvert --to notebook --execute F3-calidad-aire-santiago/notebooks/01_
 | `requirements.txt` principal | Actualizado |
 | F1 | Implementado |
 | F2 | Implementado |
-| F3 `F3-calidad-aire-santiago` | En evolución |
+| F3 `F3-calidad-aire-santiago` — exploración | Implementado |
+| F3 `F3-calidad-aire-santiago` — núcleo algorítmico | En desarrollo |
 | Pull Request template | Implementado |
 | Flujo colaborativo | Documentado |
 | Entorno reproducible | Documentado |
 | Consolidación de autoría (`.mailmap`) | Implementado |
 | Diccionario de datos | Implementado |
 | Notebook exploratorio F3 | Implementado |
+| Notebook algorítmico F3 | En desarrollo |
 
 ---
 
