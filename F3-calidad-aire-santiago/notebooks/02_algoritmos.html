@@ -7946,7 +7946,7 @@ line-height:1.7;
 margin-bottom:0;
 ">
 Se inicializa el entorno mínimo de trabajo para garantizar una ejecución reproducible del notebook.
-En esta etapa se importan las librerías científicas esenciales, se validan rutas relativas del dataset
+En esta etapa se importan las librerías científicas esenciales (McKinney, 2022; Harris et al., 2020), se validan rutas relativas del dataset
 y se define el umbral técnico de referencia para episodios críticos de MP2.5.
 </p>
 </div>
@@ -8641,7 +8641,7 @@ text-align:left !important;
 </h2>
 <p style="font-size:clamp(14px,1.5vw,16px);line-height:1.7;text-align:left !important;margin-bottom:0;">
 Esta sección transforma la serie temporal de concentraciones de <strong>MP2.5</strong> en una
-representación algorítmica de episodios críticos. Cada función cumple una responsabilidad única:
+representación algorítmica de episodios críticos. Cada función cumple una responsabilidad única (Cormen et al., 2022):
 extraer la serie, validar el umbral y detectar rachas consecutivas sobre el límite definido.
 </p>
 </div>
@@ -8959,9 +8959,9 @@ text-align:left !important;
 🔎 4. Algoritmo Recursivo 1 — Búsqueda Binaria del Umbral Crítico
 </h2>
 <p style="font-size:clamp(14px,1.5vw,16px);line-height:1.7;text-align:left !important;margin-bottom:0;">
-Se implementa una búsqueda binaria recursiva sobre la serie de concentraciones de <strong>MP2.5</strong>
+Se implementa una búsqueda binaria recursiva (Cormen et al., 2022) sobre la serie de concentraciones de <strong>MP2.5</strong>
 ordenada ascendentemente. El objetivo es localizar el primer índice donde el valor alcanza o supera el
-umbral crítico definido, reduciendo el espacio de búsqueda a la mitad en cada llamada recursiva.
+umbral crítico definido, reduciendo el espacio de búsqueda a la mitad en cada llamada recursiva (Cormen et al., 2022).
 </p>
 </div>
 </div>
@@ -9213,11 +9213,11 @@ font-weight:800;
 line-height:1.25;
 text-align:left !important;
 ">
-🧬 5. Algoritmo Recursivo 2 — Merge Sort de Horas por MP2.5
+🧬 5. Algoritmo Recursivo 2 — Merge Sort (Cormen et al., 2022) de Horas por MP2.5
 </h2>
 <p style="font-size:clamp(14px,1.5vw,16px);line-height:1.7;text-align:left !important;margin-bottom:0;">
 Se implementa manualmente el algoritmo <strong>Merge Sort</strong> para ordenar concentraciones horarias
-de <strong>MP2.5</strong>. El algoritmo divide recursivamente la serie en mitades, resuelve cada subproblema
+de <strong>MP2.5</strong>. El algoritmo divide recursivamente la serie en mitades (Cormen et al., 2022), resuelve cada subproblema
 y fusiona los resultados en orden ascendente, demostrando el principio de <strong>divide y vencerás</strong>
 con complejidad temporal O(n log n).
 </p>
@@ -9476,13 +9476,13 @@ text-align:left !important;
 </h2>
 <p style="font-size:clamp(14px,1.5vw,16px);line-height:1.7;text-align:left !important;">
 En esta sección se mide empíricamente el desempeño de dos estrategias de búsqueda sobre datos reales:
-una búsqueda lineal con complejidad <strong>O(n)</strong> y una búsqueda binaria recursiva con complejidad
+una búsqueda lineal con complejidad <strong>O(n)</strong> (Cormen et al., 2022) y una búsqueda binaria recursiva con complejidad
 <strong>O(log n)</strong>.
 </p>
 <p style="font-size:clamp(14px,1.5vw,16px);line-height:1.7;text-align:left !important;margin-bottom:0;">
 <strong>Precisión metodológica:</strong> la búsqueda binaria requiere que la serie esté previamente ordenada.
 Por lo tanto, la comparación mide el costo de búsqueda sobre un arreglo ya ordenado; si se incluyera el costo
-de ordenamiento, el proceso completo tendría un costo dominante <strong>O(n log n)</strong>.
+de ordenamiento, el proceso completo tendría un costo dominante <strong>O(n log n)</strong> (Cormen et al., 2022).
 </p>
 </div>
 </div>
@@ -9519,7 +9519,7 @@ text-align:left !important;
 </h3>
 <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.6;text-align:left !important;margin-bottom:0;">
 Se compara la localización del primer valor que alcanza o supera el umbral crítico de MP2.5.
-La búsqueda lineal recorre la serie secuencialmente, mientras que la búsqueda binaria divide el espacio
+La búsqueda lineal recorre la serie secuencialmente (Cormen et al., 2022), mientras que la búsqueda binaria divide el espacio
 de búsqueda en mitades sucesivas, siempre que el arreglo esté ordenado ascendentemente.
 </p>
 </div>
@@ -9747,9 +9747,9 @@ table-layout:fixed;
 <tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Valor en primer cruce</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">50.00 µg/m³</td></tr>
 <tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Horas críticas detectadas</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">8,639</td></tr>
 <tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Repeticiones timeit</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">100</td></tr>
-<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Tiempo promedio búsqueda lineal</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">2.2614 ms</td></tr>
-<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Tiempo promedio búsqueda binaria</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">0.0015 ms</td></tr>
-<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Mejora relativa observada</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">1503.59 veces más rápida</td></tr>
+<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Tiempo promedio búsqueda lineal</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">2.3924 ms</td></tr>
+<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Tiempo promedio búsqueda binaria</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">0.0016 ms</td></tr>
+<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Mejora relativa observada</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">1529.66 veces más rápida</td></tr>
 <tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Complejidad teórica</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">Lineal O(n) / Binaria O(log n), ≈ 17 comparaciones</td></tr>
 </table>
 <p style="margin-top:16px;margin-bottom:0;line-height:1.6;font-size:clamp(13px,1.4vw,15px);text-align:left !important;">
@@ -9799,8 +9799,8 @@ text-align:left !important;
 margin-bottom:0;
 ">
 En esta evaluación se compara el conteo de horas críticas de MP2.5 utilizando dos enfoques con la misma complejidad asintótica <strong>O(n)</strong>. 
-El primero implementa un recorrido secuencial mediante un bucle explícito en Python, mientras que el segundo utiliza operaciones vectorizadas de NumPy ejecutadas en rutinas optimizadas de bajo nivel. 
-El objetivo es demostrar que dos algoritmos pueden compartir la misma complejidad teórica y, aun así, presentar diferencias significativas de rendimiento debido a la forma en que son ejecutados internamente.
+El primero implementa un recorrido secuencial mediante un bucle explícito en Python, mientras que el segundo utiliza operaciones vectorizadas de NumPy (Harris et al., 2020) ejecutadas en rutinas optimizadas de bajo nivel. 
+El objetivo es demostrar que dos algoritmos pueden compartir la misma complejidad teórica y, aun así, presentar diferencias significativas de rendimiento debido a la forma en que son ejecutados internamente (Harris et al., 2020).
 </p>
 </div>
 </div>
@@ -10006,9 +10006,9 @@ table-layout:fixed;
 <tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Validación de equivalencia</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">✓ Coinciden</td></tr>
 <tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Porcentaje crítico</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">12.19%</td></tr>
 <tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Repeticiones timeit</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">100</td></tr>
-<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Tiempo promedio bucle Python</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">2.3131 ms</td></tr>
-<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Tiempo promedio NumPy vectorizado</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">0.0446 ms</td></tr>
-<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Mejora relativa observada</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">51.89 veces más rápida</td></tr>
+<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Tiempo promedio bucle Python</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">2.3734 ms</td></tr>
+<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Tiempo promedio NumPy vectorizado</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">0.0433 ms</td></tr>
+<tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Mejora relativa observada</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">54.84 veces más rápida</td></tr>
 <tr><td style="padding:8px;border:1px solid rgba(255,255,255,.30);font-weight:bold;text-align:left !important;">Complejidad asintótica</td><td style="padding:8px;border:1px solid rgba(255,255,255,.30);text-align:left !important;">Ambos O(n), pero NumPy ejecuta operaciones en bajo nivel optimizado</td></tr>
 </table>
 <p style="margin-top:16px;margin-bottom:0;line-height:1.6;font-size:clamp(13px,1.4vw,15px);text-align:left !important;">
@@ -10053,7 +10053,7 @@ text-align:left !important;
 </h2>
 <p style="font-size:clamp(14px,1.5vw,16px);line-height:1.7;text-align:left !important;">
 Esta sección eleva el análisis algorítmico hacia un diseño orientado a objetos, separando responsabilidades
-mediante una clase base abstracta y subclases especializadas por contaminante.
+mediante una clase base abstracta y subclases especializadas (Python Software Foundation, 2024) por contaminante.
 </p>
 <ul style="font-size:clamp(14px,1.5vw,16px);line-height:1.7;text-align:left !important;margin-bottom:0;">
 <li><strong>Encapsulamiento:</strong> los atributos internos se protegen mediante guion bajo y se exponen con propiedades de solo lectura.</li>
@@ -10802,7 +10802,7 @@ text-align:left !important;
 <p style="font-size:clamp(14px,1.5vw,16px);line-height:1.7;text-align:left !important;">
 La arquitectura del notebook organiza el procesamiento en capas: ingesta, preprocesamiento,
 codificación funcional, algoritmos recursivos, validación técnica y análisis orientado a objetos.
-Esta estructura permite mantener alta cohesión, bajo acoplamiento y trazabilidad metodológica.
+Esta estructura permite mantener alta cohesión, bajo acoplamiento y trazabilidad metodológica (Cormen et al., 2022; McKinney, 2022).
 </p>
 <h3 style="text-align:left !important;">🧱 Componentes y responsabilidades</h3>
 <table style="width:100%;border-collapse:collapse;font-size:clamp(13px,1.4vw,15px);color:white;text-align:left !important;table-layout:fixed;">
