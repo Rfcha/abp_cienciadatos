@@ -7849,7 +7849,7 @@ La contaminación atmosférica constituye uno de los principales desafíos ambie
     color:#dbeafe;
     text-align:justify;
 ">
-Este proyecto aplica técnicas de <strong>Ciencia de Datos</strong> para analizar información proveniente de la Red Nacional de Monitoreo de Calidad del Aire (<strong>SINCA</strong>), integrando procesos de adquisición, limpieza, transformación, validación y exploración de datos ambientales con el propósito de identificar patrones, relaciones y comportamientos relevantes entre las condiciones meteorológicas y los niveles de contaminación observados en Santiago.
+Este proyecto aplica técnicas de <strong>Ciencia de Datos</strong> para analizar información proveniente de la Red Nacional de Monitoreo de Calidad del Aire (<strong>SINCA</strong>) (Ministerio del Medio Ambiente, 2024), integrando procesos de adquisición, limpieza, transformación, validación y exploración de datos ambientales con el propósito de identificar patrones, relaciones y comportamientos relevantes entre las condiciones meteorológicas y los niveles de contaminación observados en Santiago.
 </p>
 <div style="
     width:100%;
@@ -8150,7 +8150,7 @@ Disponer de un entorno técnico completamente validado, con versiones de librer�
 <pre>╔══════════════════════════════════════════════════════════════╗
 ║        VALIDACIÓN DEL ENTORNO ANALÍTICO - PROYECTO F3        ║
 ╚══════════════════════════════════════════════════════════════╝
-Fecha de validación : 2026-06-13 22:55:55
+Fecha de validación : 2026-06-14 01:11:31
 Proyecto            : F3 - Calidad del Aire en Santiago
 Ruta de trabajo     : d:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F3-calidad-aire-santiago\notebooks
 
@@ -8597,7 +8597,7 @@ trazabilidad de transformaciones y registro metodológico del procesamiento.
     text-align:justify;
     margin-bottom:16px;
 ">
-Antes de incorporar los datos al flujo analítico, se realiza una inspección preliminar del archivo fuente con el propósito de verificar su estructura, codificación, integridad y formato de almacenamiento. Esta práctica constituye una etapa esencial dentro de cualquier proyecto de Ciencia de Datos, ya que permite detectar tempranamente inconsistencias que podrían comprometer la calidad, confiabilidad y reproducibilidad de los resultados obtenidos en etapas posteriores.
+Antes de incorporar los datos al flujo analítico, se realiza una inspección preliminar del archivo fuente con el propósito de verificar su estructura, codificación, integridad y formato de almacenamiento (The pandas development team, 2024). Esta práctica constituye una etapa esencial dentro de cualquier proyecto de Ciencia de Datos, ya que permite detectar tempranamente inconsistencias que podrían comprometer la calidad, confiabilidad y reproducibilidad de los resultados obtenidos en etapas posteriores.
 </p>
 <p style="
     font-size:clamp(14px,1.5vw,16px);
@@ -8795,7 +8795,7 @@ Resultado:
     text-align:justify;
     margin-bottom:16px;
 ">
-En esta etapa se realiza la incorporación controlada del conjunto de datos proveniente de la fuente oficial <strong>SINCA</strong>, considerando explícitamente las características técnicas del archivo de origen: separador punto y coma (<strong>;</strong>), representación decimal mediante coma (<strong>,</strong>) y codificación de caracteres <strong>latin-1</strong>. La definición explícita de estos parámetros permite minimizar errores de interpretación, preservar la integridad de los datos y garantizar una carga consistente dentro del entorno analítico.
+En esta etapa se realiza la incorporación controlada del conjunto de datos proveniente de la fuente oficial <strong>SINCA</strong> (Ministerio del Medio Ambiente, 2024), considerando explícitamente las características técnicas del archivo de origen: separador punto y coma (<strong>;</strong>), representación decimal mediante coma (<strong>,</strong>) y codificación de caracteres <strong>latin-1</strong>. La definición explícita de estos parámetros permite minimizar errores de interpretación, preservar la integridad de los datos y garantizar una carga consistente dentro del entorno analítico.
 </p>
 <p style="
     font-size:clamp(14px,1.5vw,16px);
@@ -8803,7 +8803,7 @@ En esta etapa se realiza la incorporación controlada del conjunto de datos prov
     color:#d1fae5;
     text-align:justify;
 ">
-Posteriormente, se ejecuta un proceso de normalización inicial orientado a preparar el dataset para las etapas de exploración y modelamiento. Este procedimiento contempla la eliminación de registros vacíos, la estandarización de variables temporales, la homologación de categorías, la incorporación de unidades de medida en los encabezados y la clasificación semántica de las variables según su naturaleza analítica, facilitando su correcta interpretación y utilización durante el desarrollo del proyecto.
+Posteriormente, se ejecuta un proceso de normalización inicial orientado a preparar el dataset (McKinney, 2022) para las etapas de exploración y modelamiento. Este procedimiento contempla la eliminación de registros vacíos, la estandarización de variables temporales, la homologación de categorías, la incorporación de unidades de medida en los encabezados y la clasificación semántica de las variables según su naturaleza analítica, facilitando su correcta interpretación y utilización durante el desarrollo del proyecto.
 </p>
 <div style="
     width:100%;
@@ -9460,7 +9460,7 @@ explícito de transformaciones. Esta evidencia fortalece la reproducibilidad y l
 <th>0</th>
 <td>cargar_memoria</td>
 <td>DataFrame cargado desde memoria</td>
-<td>2026-06-13 22:55:59</td>
+<td>2026-06-14 01:11:35</td>
 <td>192720</td>
 <td>14</td>
 </tr>
@@ -9468,7 +9468,7 @@ explícito de transformaciones. Esta evidencia fortalece la reproducibilidad y l
 <th>1</th>
 <td>normalizar_columnas</td>
 <td>Columnas normalizadas: 7</td>
-<td>2026-06-13 22:55:59</td>
+<td>2026-06-14 01:11:35</td>
 <td>192720</td>
 <td>14</td>
 </tr>
@@ -9476,7 +9476,7 @@ explícito de transformaciones. Esta evidencia fortalece la reproducibilidad y l
 <th>2</th>
 <td>limpiar_fechas</td>
 <td>Conversión robusta de fecha sobre columna fecha</td>
-<td>2026-06-13 22:55:59</td>
+<td>2026-06-14 01:11:35</td>
 <td>192720</td>
 <td>14</td>
 </tr>
@@ -9484,7 +9484,7 @@ explícito de transformaciones. Esta evidencia fortalece la reproducibilidad y l
 <th>3</th>
 <td>validar</td>
 <td>Validación técnica general del dataset</td>
-<td>2026-06-13 22:55:59</td>
+<td>2026-06-14 01:11:35</td>
 <td>192720</td>
 <td>14</td>
 </tr>
@@ -9532,7 +9532,7 @@ explícito de transformaciones. Esta evidencia fortalece la reproducibilidad y l
     text-align:justify;
     margin-bottom:16px;
 ">
-En esta etapa se realiza una revisión estructural y estadística del dataset ya cargado, con el propósito de evaluar su composición, tipos de variables, volumen de registros, valores faltantes, duplicados y comportamiento descriptivo inicial. Esta revisión permite establecer una línea base objetiva sobre la calidad de los datos antes de ejecutar procesos de limpieza, imputación o análisis exploratorio avanzado.
+En esta etapa se realiza una revisión estructural y estadística del dataset ya cargado (McKinney, 2022; The pandas development team, 2024), con el propósito de evaluar su composición, tipos de variables, volumen de registros, valores faltantes, duplicados y comportamiento descriptivo inicial. Esta revisión permite establecer una línea base objetiva sobre la calidad de los datos antes de ejecutar procesos de limpieza, imputación o análisis exploratorio avanzado.
 </p>
 <div style="
     width:100%;
@@ -9578,7 +9578,7 @@ Obtener una visión ejecutiva y verificable del estado inicial del dataset, iden
     text-align:justify;
 ">
 📘 <strong>Justificación Técnica:</strong>
-Se evita el uso directo de <code>df.info()</code> y salidas completas de <code>df.describe()</code>, ya que pueden generar resultados extensos y poco legibles. En su lugar, se construye un resumen ejecutivo controlado, reproducible y orientado a la evaluación de calidad de datos.
+Se evita el uso directo de <code>df.info()</code> (The pandas development team, 2024) y salidas completas de <code>df.describe()</code>, ya que pueden generar resultados extensos y poco legibles. En su lugar, se construye un resumen ejecutivo controlado, reproducible y orientado a la evaluación de calidad de datos.
 </p>
 </div>
 </div>
@@ -10057,7 +10057,7 @@ Una vez completada la inspección inicial, se procede a la etapa de limpieza de 
     color:#fecaca;
     text-align:justify;
 ">
-La estrategia de limpieza aplicada se fundamenta en el análisis estadístico realizado previamente. Dado que las variables cuantitativas presentan distribuciones relativamente estables y los valores faltantes representan una proporción reducida respecto del volumen total de datos, se opta por una limpieza conservadora basada en la eliminación controlada de registros incompletos, preservando la consistencia del conjunto de datos sin introducir valores artificiales.
+La estrategia de limpieza aplicada se fundamenta en el análisis estadístico realizado previamente (McKinney, 2022; The pandas development team, 2024). Dado que las variables cuantitativas presentan distribuciones relativamente estables y los valores faltantes representan una proporción reducida respecto del volumen total de datos, se opta por una limpieza conservadora basada en la eliminación controlada de registros incompletos, preservando la consistencia del conjunto de datos sin introducir valores artificiales.
 </p>
 <div style="
     width:100%;
@@ -10511,7 +10511,7 @@ Vista preliminar del dataset limpio:
     text-align:justify;
     margin-bottom:16px;
 ">
-En esta etapa se realiza la normalización final del dataset, estandarizando los nombres de columnas para asegurar compatibilidad técnica, legibilidad y facilidad de uso en etapas posteriores del proyecto. Este proceso elimina espacios, caracteres especiales, tildes y símbolos de unidades presentes en los encabezados, generando nombres consistentes, simples y adecuados para análisis programático.
+En esta etapa se realiza la normalización final del dataset, estandarizando los nombres de columnas para asegurar compatibilidad técnica, legibilidad y facilidad de uso (McKinney, 2022; The pandas development team, 2024) en etapas posteriores del proyecto. Este proceso elimina espacios, caracteres especiales, tildes y símbolos de unidades presentes en los encabezados, generando nombres consistentes, simples y adecuados para análisis programático.
 </p>
 <p style="
     font-size:clamp(14px,1.5vw,16px);
@@ -10815,7 +10815,7 @@ La normalización de nombres de columnas reduce errores en el acceso programáti
     font-size:14px;
     color:#f5f3ff;
 ">
-<tr><td style="text-align: left !important;"><strong>Fecha de ejecución</strong></td><td style="text-align: left !important;">2026-06-13 22:56:01</td></tr>
+<tr><td style="text-align: left !important;"><strong>Fecha de ejecución</strong></td><td style="text-align: left !important;">2026-06-14 01:11:37</td></tr>
 <tr><td style="text-align: left !important;"><strong>Filas antes de limpieza final</strong></td><td style="text-align: left !important;">178,709</td></tr>
 <tr><td style="text-align: left !important;"><strong>Filas finales exportadas</strong></td><td style="text-align: left !important;">178,709</td></tr>
 <tr><td style="text-align: left !important;"><strong>Filas eliminadas</strong></td><td style="text-align: left !important;">0</td></tr>
@@ -11085,7 +11085,7 @@ La normalización de nombres de columnas reduce errores en el acceso programáti
     color:#fed7aa;
     text-align:justify;
 ">
-La identificación de episodios críticos constituye el objetivo central del análisis. Para ello se utilizan los criterios establecidos por la normativa ambiental chilena, la cual define umbrales específicos de concentración para material particulado respirable (PM10) y material particulado fino (PM2.5).
+La identificación de episodios críticos constituye el objetivo central del análisis. Para ello se utilizan los criterios establecidos por la normativa ambiental chilena (Ministerio del Medio Ambiente, 2024), la cual define umbrales específicos de concentración para material particulado respirable (PM10) y material particulado fino (PM2.5).
 </p>
 <p style="
     font-size:clamp(14px,1.5vw,16px);
@@ -11093,7 +11093,7 @@ La identificación de episodios críticos constituye el objetivo central del an�
     color:#fed7aa;
     text-align:justify;
 ">
-Dado que la normativa exige que los promedios diarios sean calculados sobre un mínimo de 18 observaciones horarias válidas, se realiza previamente un filtrado de calidad temporal. Esto permite asegurar que cada día incluido en el análisis posea representatividad estadística suficiente para calcular indicadores diarios confiables.
+Dado que la normativa exige que los promedios diarios sean calculados sobre un mínimo de 18 observaciones horarias válidas (Ministerio del Medio Ambiente, 2024), se realiza previamente un filtrado de calidad temporal. Esto permite asegurar que cada día incluido en el análisis posea representatividad estadística suficiente para calcular indicadores diarios confiables.
 </p>
 <div style="
     background:#7c2d12;
@@ -14935,7 +14935,7 @@ font-size:15px;
 line-height:1.7;
 margin-bottom:0;
 ">
-Se construye una matriz de correlación para cuantificar la relación lineal entre las
+Se construye una matriz de correlación para cuantificar la relación lineal (McKinney, 2022; The pandas development team, 2024) entre las
 concentraciones de <strong>MP2.5</strong> y las variables meteorológicas disponibles.
 La correlación permite identificar asociaciones positivas o negativas entre variables,
 facilitando la detección preliminar de factores potencialmente relacionados con la
@@ -15453,7 +15453,7 @@ interpretarse como asociaciones exploratorias y no como evidencia de causalidad 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr>
-<h2 id="11.-Condiciones-que-anticipan-un-episodio-cr%C3%ADtico">11. Condiciones que anticipan un episodio crítico<a class="anchor-link" href="#11.-Condiciones-que-anticipan-un-episodio-cr%C3%ADtico">¶</a></h2><p>El análisis exploratorio realizado sobre el conjunto de datos de calidad del aire de la Región Metropolitana permitió identificar patrones relevantes asociados al comportamiento del material particulado fino (MP2.5). Sin embargo, los resultados obtenidos indican que las variables meteorológicas analizadas de manera individual presentan correlaciones lineales débiles o moderadas respecto de las concentraciones de MP2.5.</p>
+<h2 id="11.-Condiciones-que-anticipan-un-episodio-cr%C3%ADtico">11. Condiciones que anticipan un episodio crítico<a class="anchor-link" href="#11.-Condiciones-que-anticipan-un-episodio-cr%C3%ADtico">¶</a></h2><p>El análisis exploratorio realizado sobre el conjunto de datos de calidad del aire de la Región Metropolitana permitió identificar patrones relevantes asociados al comportamiento del material particulado fino (MP2.5). Sin embargo, los resultados obtenidos indican que las variables meteorológicas analizadas de manera individual presentan correlaciones lineales débiles o moderadas respecto de las concentraciones de MP2.5 (McKinney, 2022).</p>
 <p>Este resultado sugiere que los episodios críticos de contaminación atmosférica no dependen de una única variable ambiental, sino de la interacción simultánea de múltiples factores, entre ellos condiciones meteorológicas, actividad urbana, emisiones vehiculares, procesos industriales, calefacción residencial y fenómenos atmosféricos locales.</p>
 <p>A partir de las visualizaciones generadas se observan además patrones estacionales relevantes. Durante los meses de otoño e invierno se aprecia un aumento sostenido en los niveles promedio de MP2.5, comportamiento consistente con la evidencia reportada para la cuenca de Santiago, donde las condiciones de estabilidad atmosférica y ventilación reducida favorecen la acumulación de contaminantes.</p>
 <p>Por otra parte, el análisis de variables categóricas asociadas a días festivos, fines de semana e inversión térmica evidencia diferencias en la distribución de las concentraciones de MP2.5, aunque los resultados observados no permiten establecer reglas determinísticas que anticipen por sí solas la ocurrencia de episodios críticos.</p>
@@ -15469,7 +15469,7 @@ interpretarse como asociaciones exploratorias y no como evidencia de causalidad 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h2 id="12.-Conclusiones-preliminares">12. Conclusiones preliminares<a class="anchor-link" href="#12.-Conclusiones-preliminares">¶</a></h2><p>El presente análisis permitió desarrollar una exploración integral del conjunto de datos de calidad del aire de Santiago, aplicando procesos de limpieza, validación, transformación y visualización orientados a garantizar la calidad y consistencia de la información utilizada.</p>
+<h2 id="12.-Conclusiones-preliminares">12. Conclusiones preliminares<a class="anchor-link" href="#12.-Conclusiones-preliminares">¶</a></h2><p>El presente análisis permitió desarrollar una exploración integral del conjunto de datos de calidad del aire de Santiago, aplicando procesos de limpieza, validación, transformación y visualización (McKinney, 2022; The pandas development team, 2024) orientados a garantizar la calidad y consistencia de la información utilizada.</p>
 <p>Los resultados obtenidos muestran que las concentraciones de MP2.5 presentan una dinámica compleja y multifactorial. Si bien las variables meteorológicas analizadas aportan información relevante para comprender el fenómeno, ninguna de ellas explica por sí sola las variaciones observadas en los niveles de contaminación atmosférica.</p>
 <p>El análisis temporal evidenció patrones estacionales claros, observándose mayores concentraciones promedio de material particulado durante los meses de invierno. Este comportamiento resulta consistente con fenómenos ampliamente documentados en la Región Metropolitana, asociados a condiciones de menor ventilación atmosférica, inversión térmica y aumento de emisiones derivadas de actividades residenciales y urbanas.</p>
 <p>Asimismo, el análisis por comuna permitió identificar diferencias territoriales significativas en los niveles promedio de contaminación, lo que sugiere la existencia de factores locales asociados a densidad poblacional, movilidad urbana, actividad económica y características geográficas específicas de cada zona.</p>
