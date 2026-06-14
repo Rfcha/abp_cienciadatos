@@ -1,148 +1,403 @@
-# Calidad del aire en Santiago
+# Calidad del Aire en Santiago: Detección de Episodios Críticos de MP2.5 mediante Ciencia de Datos y Algoritmos Eficientes
 
-Proyecto aplicado — MCDI500. Análisis de la relación entre variables
-meteorológicas y los episodios críticos de contaminación por material particulado
-(MP2.5 / MP10) en la Región Metropolitana, con un flujo reproducible de ciencia de
-datos que abarca exploración, preprocesamiento y un núcleo algorítmico.
+## MCDI500 – Herramientas de Software Científico
 
-## Integrantes (Grupo 3)
+### Magíster en Ciencia de Datos e Inteligencia Artificial – Universidad Andrés Bello
 
-- Rodrigo Chinchón Ayala
-- Sergio Fernández Almonacid
-- Pablo Villalobos González
+**Proyecto Transversal – Grupo 3**
 
-## Problema
+**Integrantes**
 
-¿Qué condiciones meteorológicas anticipan un episodio crítico de contaminación
-por material particulado en Santiago? El proyecto identifica las condiciones
-(temperatura, viento, presión, inversión térmica) asociadas a las horas en que
-el MP2.5 supera el umbral crítico, y desarrolla algoritmos para detectar y
-caracterizar esos episodios de forma eficiente.
+* Rodrigo Chinchón Ayala
+* Sergio Fernández Almonacid
+* Pablo Villalobos González
 
-## Datos
+---
 
-Dataset horario de la red **SINCA** (Sistema de Información Nacional de Calidad
-del Aire, Ministerio del Medio Ambiente de Chile) para la Región Metropolitana,
-periodo 2022-2023.
+# 1. Resumen Ejecutivo
 
-- **11 estaciones / comunas**: Pudahuel, Cerro Navia, El Bosque, La Florida,
-  Puente Alto, Independencia, Quilicura, Cerrillos, Las Condes, Providencia y
-  Talagante.
-- **192.720 registros** horarios.
-- **Variables**:
-  - Contaminantes: MP2.5, MP10
-  - Meteorológicas: temperatura, humedad, presión, viento, radiación solar,
-    inversión térmica
-  - Temporales: día de la semana, fin de semana, festivo
+La contaminación atmosférica por material particulado fino (MP2.5) representa uno de los principales problemas ambientales y de salud pública en la Región Metropolitana de Santiago.
 
-El detalle de cada variable está en [`docs/diccionario_datos.md`](docs/diccionario_datos.md).
+Este proyecto desarrolla un flujo reproducible de Ciencia de Datos para identificar, caracterizar y analizar episodios críticos de contaminación atmosférica utilizando datos horarios provenientes de la red oficial SINCA (Sistema de Información Nacional de Calidad del Aire).
 
-Fuente: https://sinca.mma.gob.cl
+El trabajo se estructura progresivamente en tres fases:
 
-> **Nota sobre los datos:** en esta fase se utiliza un dataset sintético de
-> demostración que reproduce relaciones físicas documentadas de la contaminación
-> en Santiago (inversión térmica invernal, ventilación por viento, ciclo diario
-> por transporte y calefacción a leña). Para conclusiones definitivas deben
-> usarse datos reales descargados del SINCA.
+* **Fase 1:** definición conceptual, entorno reproducible y control de versiones.
+* **Fase 2:** exploración, limpieza, transformación y análisis exploratorio de datos.
+* **Fase 3:** construcción del núcleo algorítmico mediante programación estructurada, algoritmos recursivos, análisis de complejidad computacional y aplicación de Programación Orientada a Objetos (POO).
 
-> **Nota sobre el versionamiento:** como buena práctica en ciencia de datos, los
-> datos crudos normalmente **no** se versionan en Git (suelen ser pesados y
-> cambiar con frecuencia). En este repositorio se incluye el CSV de demostración
-> en `data/raw/` para facilitar la revisión de la entrega; la regla
-> correspondiente queda comentada en `.gitignore`.
+El objetivo final es construir una base técnica sólida para futuras fases de modelamiento predictivo y aprendizaje automático.
 
-## Fases del proyecto
+---
 
-Este proyecto aplicado se desarrolla en notebooks sucesivos dentro de
-`notebooks/`, cada uno construyendo sobre el anterior:
+# 2. Pregunta de Investigación
 
-| Notebook | Contenido | Apartados de rúbrica |
-|---|---|---|
-| `01_exploracion.ipynb` | Carga, limpieza, definición del episodio crítico, panel exploratorio, correlaciones y conclusiones preliminares. | Exploración y preprocesamiento. |
-| `02_algoritmos.ipynb` | Núcleo algorítmico: funciones modulares, algoritmos recursivos (búsqueda binaria y merge sort), mediciones de complejidad con `timeit`, clase `AnalizadorAire` y documentación de arquitectura. | Codificación funcional, eficiencia, modularidad, recursividad. |
+> ¿Qué condiciones meteorológicas están asociadas a la ocurrencia de episodios críticos de contaminación por material particulado fino (MP2.5) en Santiago de Chile?
 
-> **Procedencia del dataset para el análisis algorítmico:** el notebook
-> `02_algoritmos.ipynb` parte del dataset procesado **de este mismo proyecto**
-> (`data/processed/sinca_limpio.csv`), no del dataset de práctica de la carpeta
-> `F2/` del repositorio. La carpeta `F2/` corresponde a una sumativa previa del
-> curso con un dataset genérico, sin relación con los datos del SINCA.
+---
 
-## Arquitectura de Software y Objetos (Fase 3)
+# 3. Objetivos
 
-El sistema ha sido migrado desde un paradigma procedimental hacia una arquitectura basada en **Programación Orientada a Objetos (POO)** para asegurar un flujo de trabajo altamente mantenible y extensible:
+## Objetivo General
 
-- **`PreprocesadorAire` (limpieza.py):** Encapsula los criterios de carga e integridad referencial del dataset crudo de la red SINCA.
-- **`Contaminante` (Clase Base):** Abstrae las variables normativas y límites críticos medioambientales chilenos.
-- **`AnalizadorMP25` (Subclase):** Hereda las propiedades del contaminante y expone de forma exclusiva el núcleo algorítmico optimizado (`merge_sort_recursivo` y `busqueda_binaria_recursiva`).
+Analizar la relación entre variables meteorológicas y los episodios críticos de contaminación atmosférica por MP2.5 en Santiago mediante técnicas reproducibles de Ciencia de Datos y algoritmos eficientes.
 
+## Objetivos Específicos
 
-## Estructura del repositorio
+* Procesar datos horarios provenientes del SINCA.
+* Construir un pipeline reproducible de limpieza y transformación.
+* Detectar episodios críticos de contaminación.
+* Implementar algoritmos recursivos para búsqueda y ordenamiento.
+* Comparar eficiencia computacional mediante análisis temporal.
+* Aplicar principios de encapsulamiento, herencia y polimorfismo.
+* Documentar técnicamente el sistema y su arquitectura.
+
+---
+
+# 4. Dataset Utilizado
+
+## Fuente Oficial
+
+Sistema de Información Nacional de Calidad del Aire (SINCA)
+
+https://sinca.mma.gob.cl
+
+## Cobertura
+
+* Región Metropolitana de Santiago
+* Periodo analizado: 2022–2023
+* Frecuencia: Horaria
+
+## Volumen
+
+* 192.720 registros
+* 11 estaciones de monitoreo
+* Más de 15 variables ambientales
+
+## Comunas Analizadas
+
+* Cerrillos
+* Cerro Navia
+* El Bosque
+* Independencia
+* La Florida
+* Las Condes
+* Providencia
+* Puente Alto
+* Pudahuel
+* Quilicura
+* Talagante
+
+## Variables Principales
+
+### Contaminantes
+
+* MP2.5
+* MP10
+
+### Meteorológicas
+
+* Temperatura
+* Humedad relativa
+* Presión atmosférica
+* Velocidad del viento
+* Radiación solar
+* Inversión térmica
+
+### Temporales
+
+* Fecha
+* Hora
+* Día de semana
+* Fin de semana
+* Festivos
+
+---
+
+# 5. Desarrollo por Fases
+
+## Fase 1 – Preparación del Proyecto
+
+Objetivo:
+
+Construir una base reproducible para el desarrollo colaborativo.
+
+Actividades:
+
+* Configuración de entorno Python.
+* Git y GitHub.
+* Estructura de carpetas.
+* Definición de estándares.
+* Documentación inicial.
+* Gestión colaborativa mediante ramas y Pull Requests.
+
+---
+
+## Fase 2 – Exploración y Preparación de Datos
+
+Objetivo:
+
+Comprender y preparar el dataset para análisis posteriores.
+
+Actividades:
+
+* Carga de datos.
+* Limpieza de registros.
+* Tratamiento de valores faltantes.
+* Imputación mediante mediana.
+* Análisis exploratorio.
+* Visualizaciones estadísticas.
+* Correlaciones.
+* Análisis temporal.
+* Construcción de variables derivadas.
+
+Notebook:
+
+`01_exploracion.ipynb`
+
+---
+
+## Fase 3 – Núcleo Algorítmico
+
+Objetivo:
+
+Implementar soluciones algorítmicas eficientes utilizando programación estructurada, recursividad y POO.
+
+Actividades:
+
+### Programación Funcional
+
+* Detección de episodios críticos.
+* Procesamiento modular.
+* Separación de responsabilidades.
+
+### Algoritmos Recursivos
+
+#### Búsqueda Binaria
+
+Complejidad:
+
+O(log n)
+
+Objetivo:
+
+Localizar el primer valor que supera un umbral crítico.
+
+#### Merge Sort
+
+Complejidad:
+
+O(n log n)
+
+Objetivo:
+
+Ordenamiento eficiente de concentraciones de MP2.5.
+
+### Análisis de Complejidad
+
+Comparaciones realizadas:
+
+* Búsqueda lineal vs búsqueda binaria.
+* Bucle Python vs vectorización NumPy.
+
+Herramienta utilizada:
+
+* timeit
+
+### Programación Orientada a Objetos
+
+Implementación de:
+
+* Encapsulamiento
+* Herencia
+* Polimorfismo
+* Clases abstractas
+* Método plantilla (Template Method)
+
+---
+
+# 6. Arquitectura de Software
+
+## Jerarquía de Clases
 
 ```text
-F3-calidad-aire-santiago/
-├── README.md                  Descripción del proyecto
-├── requirements.txt           Dependencias de Python
-├── .gitignore                 Archivos ignorados por Git
-├── data/
-│   ├── raw/                   CSV originales del SINCA
-│   │   └── sinca_santiago.csv
-│   └── processed/             Datos limpios listos para análisis
-│       └── sinca_limpio.csv
-├── notebooks/
-│   ├── 01_exploracion.ipynb   Exploración inicial de los datos
-│   └── 02_algoritmos.ipynb    Núcleo algorítmico (Fase 3)
-├── src/
-│   ├── limpieza.py            Funciones de carga y limpieza
-│   └── algoritmos.py          Funciones algorítmicas reutilizables (opcional)
-└── docs/
-    ├── diccionario_datos.md   Descripción de las variables
-    └── referencias.md         Referencias en formato APA
+AnalizadorBase (ABC)
+│
+├── AnalizadorMP25
+│     ├── merge_sort_recursivo()
+│     └── busqueda_binaria_recursiva()
+│
+└── AnalizadorMP10
 ```
 
-## Cómo reproducir el análisis
+## Responsabilidades
+
+### AnalizadorBase
+
+* Contrato común del sistema.
+* Encapsulamiento de datos.
+* Estadísticas generales.
+* Método plantilla.
+
+### AnalizadorMP25
+
+* Análisis especializado de MP2.5.
+* Algoritmos recursivos.
+* Detección de episodios críticos.
+
+### AnalizadorMP10
+
+* Análisis especializado de MP10.
+* Reutilización del comportamiento base.
+
+---
+
+# 7. Estructura del Repositorio
+
+```text
+F3-calidad-aire-santiago
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── data
+│   ├── raw
+│   └── processed
+│
+├── notebooks
+│   ├── 01_exploracion.ipynb
+│   └── 02_algoritmos.ipynb
+│
+├── src
+│   ├── limpieza.py
+│   └── algoritmos.py
+│
+└── docs
+    ├── referencias.md
+    └── diccionario_datos.md
+```
+
+---
+
+# 8. Reproducibilidad
+
+## Clonar Repositorio
 
 ```bash
-git clone https://github.com/usuario/abp_cienciadatos.git
+git clone https://github.com/Rfcha/abp_cienciadatos.git
+```
+
+```bash
 cd abp_cienciadatos/F3-calidad-aire-santiago
+```
+
+## Crear Entorno Virtual
+
+```bash
 python -m venv .venv
-source .venv/bin/activate      # En Windows: .venv\Scripts\activate
+```
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+
+## Instalar Dependencias
+
+```bash
 pip install -r requirements.txt
+```
+
+## Ejecutar
+
+```bash
 jupyter lab
 ```
 
-Ejecutar los notebooks en orden (`01_exploracion.ipynb` → `02_algoritmos.ipynb`)
-con `Restart & Run All`.
+Ejecutar los notebooks en orden:
 
-El CSV usa punto y coma como separador y coma decimal (formato SINCA):
+1. `01_exploracion.ipynb`
+2. `02_algoritmos.ipynb`
 
-```python
-df = pd.read_csv('data/raw/sinca_santiago.csv',
-                 sep=';', decimal=',', encoding='latin-1')
+utilizando:
+
+```text
+Kernel → Restart & Run All
 ```
 
-## Núcleo algorítmico (Fase 3)
+---
 
-El notebook `02_algoritmos.ipynb` implementa, sobre la columna MP2.5 y el umbral
-de 50 µg/m³:
+# 9. Flujo de Trabajo Colaborativo
 
-- **Búsqueda binaria recursiva** del primer cruce del umbral — O(log n).
-- **Merge sort recursivo** de las concentraciones — O(n log n).
-- **Detección de episodios como rachas** de horas consecutivas sobre el umbral.
-- **Dos comparaciones de complejidad** con `timeit`: búsqueda lineal vs binaria, y
-  bucle Python vs operación vectorizada.
-- **Clase `AnalizadorAire`** que encapsula datos, umbral y métodos de análisis.
+## Estrategia Git
 
-## Herramientas
+```text
+main
+ │
+ └── dev
+      │
+      ├── feature/rodrigo
+      ├── feature/pablo
+      └── feature/sergio
+```
 
-- Python 3.11 (pandas, numpy, matplotlib)
-- Jupyter Lab / Notebooks
-- `timeit` (biblioteca estándar) para mediciones de complejidad
-- Git / GitHub para control de versiones y colaboración
+## Convención de Commits
 
-## Referencias (APA 7.ª Edición)
+```text
+feat:
+fix:
+docs:
+refactor:
+test:
+chore:
+```
 
-- Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). *Introduction to algorithms* (4.ª ed.). MIT Press.
-- Harris, C. R., Millman, K. J., van der Walt, S. J., Gommers, R., Virtanen, P., Cournapeau, D., ... & Oliphant, T. E. (2020). Array programming with NumPy. *Nature*, 585(7825), 357-362.
-- McKinney, W. (2022). *Python for Data Analysis* (3.ª ed.). O'Reilly Media.
-- Ministerio del Medio Ambiente. (2024). *Sistema de Información Nacional de Calidad del Aire (SINCA)*. https://sinca.mma.gob.cl
-- Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., ... & Duchesnay, É. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, 12, 2825-2830.
+## Integración
+
+* Pull Request obligatorio.
+* Revisión cruzada.
+* Merge hacia dev.
+* Liberación controlada hacia main.
+
+---
+
+# 10. Resultados Técnicos Relevantes
+
+Durante la Fase 3 se verificó que:
+
+* La búsqueda binaria supera ampliamente a la búsqueda lineal para localizar umbrales críticos.
+* La vectorización mediante NumPy reduce significativamente los tiempos de ejecución respecto a bucles Python tradicionales.
+* La arquitectura orientada a objetos mejora la mantenibilidad y escalabilidad del sistema.
+* La recursividad permite implementar algoritmos clásicos con complejidad óptima.
+
+---
+
+# 11. Trabajo Futuro
+
+Fase 4:
+
+* Modelamiento predictivo.
+* Machine Learning supervisado.
+* Predicción de episodios críticos.
+* Evaluación de modelos.
+* Métricas de desempeño.
+* Interpretabilidad de resultados.
+
+---
+
+# 12. Referencias
+
+1.- Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). *Introduction to Algorithms* (4th ed.). MIT Press.
+2.- Harris, C. R., Millman, K. J., van der Walt, S. J., et al. (2020). Array programming with NumPy. *Nature*, 585, 357–362.
+3.- McKinney, W. (2022). *Python for Data Analysis* (3rd ed.). O'Reilly Media.
+4.- Ministerio del Medio Ambiente. (2024). Sistema de Información Nacional de Calidad del Aire (SINCA). https://sinca.mma.gob.cl
+5.- Python Software Foundation. (2024). Python Standard Library – timeit. https://docs.python.org/3/library/timeit.html
+6.- The pandas development team. (2024). pandas documentation. https://pandas.pydata.org/docs/
