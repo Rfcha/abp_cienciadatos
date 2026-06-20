@@ -1,0 +1,36 @@
+﻿CREACIÓN SEGURA F4 - ENTREGA FINAL
+
+Fecha ejecución : 2026-06-19 22:05:37
+AuditRoot       : D:\AUDIT
+ProjectRoot     : D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos
+Fuente F3       : D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F3-calidad-aire-santiago
+Destino F4      : D:\LM_IA_LAB\04_PROJECTS\abp_cienciadatos\F4-entrega-final
+Backup previo   : No aplica
+Log             : D:\AUDIT\crear_F4_entrega_final_20260619_220537.log
+Estado          : OK
+
+Resumen:
+- Archivos fuente considerados : 17
+- Archivos faltantes           : 0
+- Archivos con tamaño distinto : 0
+
+Archivos en F4:
+- .\.gitignore [492 bytes]
+- .\data\processed\.gitkeep [0 bytes]
+- .\data\processed\sinca_limpio.csv [17205880 bytes]
+- .\data\raw\.gitkeep [0 bytes]
+- .\data\raw\sinca_santiago.csv [16081175 bytes]
+- .\docs\aporte_metod_f3_SFA.md [2548 bytes]
+- .\docs\checklist_interpretacion_visualizaciones_SFA.md [4947 bytes]
+- .\docs\diccionario_datos.md [2134 bytes]
+- .\docs\informe_final\checklist_informe_final.md [553 bytes]
+- .\docs\observaciones_tecnicas_analisis_f3_SFA.md [3801 bytes]
+- .\docs\video\guion_video.md [610 bytes]
+- .\Mapa Conceptual F3.png [1473625 bytes]
+- .\mcdi500_s1_grupo3.pdf [592689 bytes]
+- .\notebooks\01_exploracion.ipynb [4959765 bytes]
+- .\notebooks\02_algoritmos.ipynb [216158 bytes]
+- .\README.md [1355 bytes]
+- .\requirements.txt [2022 bytes]
+- .\src\limpieza.py [1563 bytes]
+- .\src\validacion_sfa.py [3420 bytes]

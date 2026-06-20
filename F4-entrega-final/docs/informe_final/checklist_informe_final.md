@@ -1,0 +1,22 @@
+﻿# Checklist Informe Final F4
+
+- [ ] Portada
+- [ ] Resumen ejecutivo
+- [ ] Introducción
+- [ ] Planteamiento del problema
+- [ ] Objetivos general y específicos
+- [ ] Descripción del dataset
+- [ ] Fuente de datos SINCA
+- [ ] Limpieza y transformación
+- [ ] Análisis exploratorio
+- [ ] Algoritmos implementados
+- [ ] Validaciones técnicas
+- [ ] Resultados principales
+- [ ] Visualizaciones
+- [ ] Discusión
+- [ ] Limitaciones
+- [ ] Conclusiones
+- [ ] Trabajo futuro
+- [ ] Evidencia de colaboración GitHub
+- [ ] Reproducibilidad
+- [ ] Referencias

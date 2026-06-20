@@ -1,0 +1,64 @@
+# Proyecto ABP — Calidad del Aire en Santiago (F3)
+# MCDI500 · Grupo 3
+# Entorno reproducible para notebooks:
+# - 01_exploracion.ipynb
+# - 02_algoritmos.ipynb
+#
+# Instalación:
+# python -m pip install -r requirements.txt
+#
+# Versión Python usada en la ejecución:
+# Python 3.12.10
+#
+# Nota:
+# timeit, os, sys, re, unicodedata, pathlib, warnings, abc y typing
+# pertenecen a la biblioteca estándar de Python y no requieren instalación.
+
+# =============================================================================
+# Núcleo de ciencia de datos
+# =============================================================================
+
+pandas==2.3.3
+numpy==2.3.5
+
+# =============================================================================
+# Visualización
+# =============================================================================
+
+matplotlib==3.10.0
+
+# =============================================================================
+# Entorno Jupyter
+# =============================================================================
+
+jupyterlab==4.4.5
+notebook==7.4.5
+ipykernel==6.30.1
+ipywidgets==8.1.7
+
+# =============================================================================
+# Exportación y compatibilidad de notebooks
+# =============================================================================
+
+nbconvert==7.16.6
+nbformat==5.10.4
+jupyter_client==8.6.3
+jupyter_core==5.8.1
+
+# =============================================================================
+# Utilidades de desarrollo y validación
+# =============================================================================
+
+ruff==0.12.9
+
+# =============================================================================
+# Dependencias transitivas relevantes fijadas para reproducibilidad
+# =============================================================================
+
+python-dateutil==2.9.0.post0
+pytz==2025.2
+tzdata==2025.2
+packaging==25.0
+traitlets==5.14.3
+tornado==6.5.2
+pyzmq==27.0.2

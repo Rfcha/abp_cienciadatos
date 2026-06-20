@@ -1,15 +1,56 @@
 # Proyecto ABP — Ciencia de Datos Reproducible (MCDI500)
 
-**Curso:** Programación para la Ciencia de Datos  
-**Programa:** Magíster en Ciencia de Datos e Inteligencia Artificial Avanzada — UNAB  
-**Proyecto:** ABP Ciencia de Datos Reproducible  
-**Equipo:** Grupo 3  
+## Magíster en Ciencia de Datos e Inteligencia Artificial Avanzada — UNAB
+
+**Curso:** MCDI500 — Programación para la Ciencia de Datos
+**Proyecto:** Aprendizaje Basado en Proyectos (ABP) — Ciencia de Datos Reproducible
+**Equipo:** Grupo 3
 
 ## Integrantes
 
 - Rodrigo Chinchón Ayala
-- Sergio Fernández Almonacid
 - Pablo Villalobos González
+- Sergio Fernández Almonacid
+
+---
+
+## Resumen Ejecutivo
+
+Este repositorio consolida el desarrollo completo del Proyecto Integrador ABP del curso **MCDI500**, ejecutado bajo principios de reproducibilidad, colaboración y buenas prácticas de ingeniería de datos.
+
+El proyecto evolucionó a través de cuatro fases progresivas:
+
+- **F1:** Definición del problema y construcción del entorno reproducible.
+- **F2:** Obtención, limpieza y transformación de datos.
+- **F3:** Exploración avanzada e implementación del núcleo algorítmico.
+- **F4:** Consolidación final, análisis de resultados, reproducibilidad y comunicación ejecutiva.
+
+La fase aplicada del proyecto se desarrolló sobre datos oficiales del **Sistema de Información Nacional de Calidad del Aire (SINCA)**, con foco en el análisis de episodios críticos de contaminación atmosférica por material particulado fino (**MP2.5**) en Santiago de Chile.
+
+---
+
+## Objetivo General
+
+Analizar datos históricos de calidad del aire provenientes de la red SINCA para identificar patrones, tendencias y episodios críticos de contaminación atmosférica mediante técnicas reproducibles de ciencia de datos implementadas en Python.
+
+---
+
+## Evolución del Proyecto
+
+```text
+F1 ──► F2 ──► F3 ──► F4
+
+Definición
+    │
+    ▼
+Preprocesamiento
+    │
+    ▼
+Exploración y Algoritmos
+    │
+    ▼
+Informe Final y Comunicación
+```
 
 ---
 
@@ -29,13 +70,14 @@ El objetivo principal es construir un proyecto de ciencia de datos reproducible,
 - medición de complejidad y eficiencia;
 - documentación técnica y académica del proceso.
 
-El repositorio se organiza en tres proyectos principales:
+El repositorio se organiza en cuatro proyectos principales:
 
 | Proyecto | Carpeta | Propósito |
 |---|---|---|
 | F1 | `F1/` | Definición inicial, entorno reproducible, documentación técnica y evidencias (sumativa del curso, dataset de práctica). |
 | F2 | `F2/` | Obtención, limpieza, transformación y preparación inicial de datos (sumativa del curso, dataset de práctica con defectos deliberados). |
 | F3 | `F3-calidad-aire-santiago/` | Proyecto aplicado sobre calidad del aire en Santiago de Chile, con datos del SINCA. Incluye exploración y núcleo algorítmico. |
+| F4 | `F4-entrega-final/` | Consolidación final, informe ejecutivo, reproducibilidad y comunicación de resultados. |
 
 > **Nota sobre la organización:** las carpetas `F1/` y `F2/` corresponden a las **sumativas previas del curso**, desarrolladas sobre datasets de práctica genéricos. El **proyecto aplicado real** del grupo es `F3-calidad-aire-santiago/`, que trabaja con datos del SINCA y contiene su propio flujo completo de preprocesamiento, exploración y análisis algorítmico. El dataset base para el análisis algorítmico de la Fase 3 es el procesado del propio proyecto SINCA (`F3-calidad-aire-santiago/data/processed/`), no el de la carpeta `F2/`.
 
@@ -123,6 +165,16 @@ Este proyecto analiza la relación entre variables meteorológicas y los episodi
 - Medir y comparar la complejidad de las implementaciones con `timeit`.
 - Documentar la arquitectura del código y su proyección a fases posteriores.
 
+### Variables analizadas
+
+- MP2.5 (material particulado fino)
+- MP10
+- O₃ (ozono)
+- NO₂ (dióxido de nitrógeno)
+- SO₂ (dióxido de azufre)
+- CO (monóxido de carbono)
+- Variables meteorológicas asociadas
+
 ### Estructura actual
 
 ```text
@@ -147,34 +199,27 @@ F3-calidad-aire-santiago/
 
 ---
 
-## 5. Estructura general del repositorio
+## 5. Proyecto F4 — Entrega Final
+
+La carpeta `F4-entrega-final/` corresponde a la **consolidación final** del proyecto, donde se integran los resultados de las fases previas y se comunica el cierre ejecutivo del trabajo.
+
+### Objetivos de F4
+
+- Integrar los resultados obtenidos en F3.
+- Elaborar el informe final del proyecto.
+- Preparar la presentación y el video de cierre.
+- Documentar la reproducibilidad de extremo a extremo.
+- Incorporar evidencia de colaboración del equipo.
+- Comunicar hallazgos y conclusiones ejecutivas.
+
+---
+
+## 6. Estructura general del repositorio
 
 ```text
 ABP_CIENCIADATOS/
 ├── .github/
 │   └── pull_request_template.md
-├── F3-calidad-aire-santiago/
-│   ├── data/
-│   │   ├── raw/
-│   │   └── processed/
-│   ├── docs/
-│   │   └── diccionario_datos.md
-│   ├── notebooks/
-│   │   ├── 01_exploracion.ipynb
-│   │   └── 02_algoritmos.ipynb
-│   ├── src/
-│   ├── .gitignore
-│   ├── README.md
-│   └── requirements.txt
-├── common/
-│   ├── src/
-│   ├── tests/
-│   └── .gitkeep
-├── docs/
-│   ├── checklist_entrega_semana1.md
-│   ├── entorno_reproducible.txt
-│   ├── flujo_colaborativo.md
-│   └── .gitkeep
 ├── F1/
 │   ├── data/
 │   ├── docs/
@@ -192,7 +237,31 @@ ABP_CIENCIADATOS/
 │   ├── src/
 │   ├── README.md
 │   └── requirements.txt
+├── F3-calidad-aire-santiago/
+│   ├── data/
+│   │   ├── raw/
+│   │   └── processed/
+│   ├── docs/
+│   │   └── diccionario_datos.md
+│   ├── notebooks/
+│   │   ├── 01_exploracion.ipynb
+│   │   └── 02_algoritmos.ipynb
+│   ├── src/
+│   ├── .gitignore
+│   ├── README.md
+│   └── requirements.txt
+├── F4-entrega-final/
+├── common/
+│   ├── src/
+│   ├── tests/
+│   └── .gitkeep
+├── docs/
+│   ├── checklist_entrega_semana1.md
+│   ├── entorno_reproducible.txt
+│   ├── flujo_colaborativo.md
+│   └── .gitkeep
 ├── logs/
+├── .github/
 ├── .gitignore
 ├── .mailmap
 ├── CODE_OF_CONDUCT.md
@@ -206,9 +275,9 @@ ABP_CIENCIADATOS/
 
 ---
 
-## 6. Entorno reproducible
+## 7. Entorno reproducible
 
-### 6.1 Crear entorno virtual
+### 7.1 Crear entorno virtual
 
 Desde la raíz del repositorio:
 
@@ -216,7 +285,7 @@ Desde la raíz del repositorio:
 python -m venv .venv
 ```
 
-### 6.2 Activar entorno en Windows PowerShell
+### 7.2 Activar entorno en Windows PowerShell
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -229,25 +298,25 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
 .\.venv\Scripts\Activate.ps1
 ```
 
-### 6.3 Actualizar pip
+### 7.3 Actualizar pip
 
 ```powershell
 python -m pip install --upgrade pip setuptools wheel
 ```
 
-### 6.4 Instalar dependencias
+### 7.4 Instalar dependencias
 
 ```powershell
 python -m pip install -r requirements.txt
 ```
 
-### 6.5 Registrar kernel de Jupyter
+### 7.5 Registrar kernel de Jupyter
 
 ```powershell
 python -m ipykernel install --user --name abp-cienciadatos --display-name "Python (ABP Ciencia Datos)"
 ```
 
-### 6.6 Iniciar Jupyter Lab
+### 7.6 Iniciar Jupyter Lab
 
 ```powershell
 jupyter lab
@@ -255,7 +324,7 @@ jupyter lab
 
 ---
 
-## 7. Ejecución recomendada
+## 8. Ejecución recomendada
 
 ### F1
 
@@ -288,13 +357,19 @@ Ejecutar todas las celdas desde el kernel:
 Python (ABP Ciencia Datos)
 ```
 
+### F4 — Entrega Final
+
+```text
+F4-entrega-final/
+```
+
 ---
 
-## 8. Contribución del equipo
+## 9. Contribución del equipo
 
 La participación de cada integrante se evidencia mediante los commits individuales registrados en el historial de Git. Durante el desarrollo, el equipo se encontraba en proceso de aprendizaje de Git/GitHub, lo que derivó en configuraciones locales inconsistentes del parámetro `user.name`, generando que un mismo colaborador apareciera bajo múltiples identidades en el historial. Para consolidar la trazabilidad individual, se aplicó un archivo `.mailmap` que normaliza las identidades **sin alterar el historial de commits**. GitHub identifica correctamente a los tres colaboradores reales (sección Contributors).
 
-### 8.1 Contribución por fase
+### 9.1 Contribución por fase
 
 **Fase 1 — Definición y entorno reproducible** (37 commits)
 
@@ -314,7 +389,7 @@ La participación de cada integrante se evidencia mediante los commits individua
 
 > El conteo de commits se obtuvo con `git shortlog -s -n -e --all -- F1` y `-- F2`, con las identidades consolidadas vía `.mailmap`.
 
-### 8.2 Aportes principales por integrante
+### 9.2 Aportes principales por integrante
 
 - **Rodrigo Chinchón Ayala:** estructura del repositorio, configuración del entorno reproducible, diseño y orquestación del pipeline de F2, módulos en `src/` y desarrollo de los notebooks.
 - **Pablo Villalobos González:** documentación técnica de F1, desarrollo de la definición del problema y apoyo en la exploración inicial de datos.
@@ -322,11 +397,11 @@ La participación de cada integrante se evidencia mediante los commits individua
 
 ---
 
-## 9. Flujo colaborativo
+## 10. Flujo colaborativo
 
-El repositorio utiliza un flujo colaborativo basado en ramas, Pull Requests y revisión entre integrantes.
+El repositorio utiliza un flujo colaborativo basado en ramas, Pull Requests y revisión entre integrantes (Git Flow simplificado y commits semánticos).
 
-### 9.1 Ramas principales
+### 10.1 Ramas principales
 
 | Rama | Uso |
 |---|---|
@@ -336,7 +411,7 @@ El repositorio utiliza un flujo colaborativo basado en ramas, Pull Requests y re
 | `fix/*` | Correcciones puntuales. |
 | `docs/*` | Cambios documentales. |
 
-### 9.2 Ejemplos de ramas
+### 10.2 Ejemplos de ramas
 
 ```text
 feature/f1-entorno-reproducible
@@ -348,14 +423,14 @@ fix/correccion-requirements
 
 ---
 
-## 10. Pull Requests
+## 11. Pull Requests
 
 Todo cambio relevante debe integrarse mediante Pull Request. La rama `main` está protegida y no admite push directo.
 
 ### Criterios mínimos de un Pull Request
 
 - Describe claramente el cambio realizado.
-- Indica a qué fase corresponde: F1, F2 o F3.
+- Indica a qué fase corresponde: F1, F2, F3 o F4.
 - Incluye evidencia cuando corresponda.
 - No sube archivos temporales innecesarios.
 - No incluye conflictos de merge.
@@ -371,7 +446,7 @@ El template de Pull Request se encuentra en:
 
 ---
 
-## 11. Convención de commits
+## 12. Convención de commits
 
 Se utiliza una convención simple y profesional basada en commits semánticos.
 
@@ -382,11 +457,12 @@ Se utiliza una convención simple y profesional basada en commits semánticos.
 | `docs` | Documentación | `docs: actualiza README principal` |
 | `refactor` | Reorganización interna | `refactor: ordena estructura de carpetas F2` |
 | `test` | Pruebas | `test: agrega validaciones de carga de datos` |
+| `data` | Cambios en datasets o datos procesados | `data: actualiza dataset procesado del SINCA` |
 | `chore` | Mantención | `chore: actualiza requirements` |
 
 ---
 
-## 12. Validaciones recomendadas
+## 13. Validaciones recomendadas
 
 Antes de hacer commit o Pull Request:
 
@@ -407,7 +483,7 @@ jupyter nbconvert --to notebook --execute F3-calidad-aire-santiago/notebooks/02_
 
 ---
 
-## 13. Buenas prácticas del repositorio
+## 14. Buenas prácticas del repositorio
 
 - No versionar `.venv/`.
 - No versionar `.ruff_cache/`.
@@ -422,41 +498,38 @@ jupyter nbconvert --to notebook --execute F3-calidad-aire-santiago/notebooks/02_
 
 ---
 
-## 14. Estado del proyecto
+## 15. Principales hallazgos
+
+- El contaminante con mayor relevancia operacional fue **MP2.5**.
+- Se identificaron patrones temporales consistentes asociados a episodios críticos de contaminación atmosférica.
+- La limpieza y normalización de datos permitió construir un conjunto analítico reproducible.
+- La implementación modular facilitó la reutilización de componentes entre fases.
+- El enfoque reproducible aseguró trazabilidad completa desde los datos hasta los resultados.
+
+---
+
+## 16. Estado del proyecto
 
 | Componente | Estado |
 |---|---|
 | Repositorio GitHub | Implementado |
 | README principal | Actualizado |
 | `requirements.txt` principal | Actualizado |
-| F1 | Implementado |
-| F2 | Implementado |
-| F3 `F3-calidad-aire-santiago` — exploración | Implementado |
-| F3 `F3-calidad-aire-santiago` — núcleo algorítmico | En desarrollo |
+| F1 — Definición y entorno | Finalizado |
+| F2 — Preprocesamiento | Finalizado |
+| F3 `F3-calidad-aire-santiago` — exploración | Finalizado |
+| F3 `F3-calidad-aire-santiago` — núcleo algorítmico | Finalizado |
+| F4 — Entrega final | En desarrollo |
 | Pull Request template | Implementado |
 | Flujo colaborativo | Documentado |
 | Entorno reproducible | Documentado |
 | Consolidación de autoría (`.mailmap`) | Implementado |
 | Diccionario de datos | Implementado |
 | Notebook exploratorio F3 | Implementado |
-| Notebook algorítmico F3 | En desarrollo |
+| Notebook algorítmico F3 | Implementado |
 
 ---
 
-## 15. Licencia y uso académico
+## 17. Licencia y uso académico
 
-Este repositorio tiene fines académicos y corresponde al desarrollo del proyecto ABP del Grupo 3 para el curso **MCDI500 — Programación para la Ciencia de Datos**.
-## Contribución SFA
-
-Mi contribución en esta fase del proyecto se orienta a fortalecer la comprensión del problema, la documentación metodológica y la interpretación de resultados desde potenciales perspectivas financieras y de gestión.
-
-Principales aportes:
-
-- Revisión del planteamiento del problema.
-- Apoyo en la interpretación de los datos.
-- Validación de supuestos metodológicos.
-- Revisión de coherencia entre objetivos, datos y resultados.
-- Documentación de conclusiones y recomendaciones.
-- 
-Este repositorio tiene fines académicos y corresponde al desarrollo del proyecto ABP del Grupo 3 para el curso **MCDI500 — Programación para la Ciencia de Datos**. La licencia se encuentra en el archivo `LICENSE`.
-
+Este repositorio tiene fines exclusivamente académicos y corresponde al desarrollo del Proyecto Integrador ABP del **Grupo 3** para el curso **MCDI500 — Programación para la Ciencia de Datos**, perteneciente al **Magíster en Ciencia de Datos e Inteligencia Artificial Avanzada de la Universidad Andrés Bello**. La licencia se encuentra en el archivo `LICENSE`.
