@@ -22,6 +22,6 @@ Ejemplos de comportamiento inaceptable:
 
 ## Aplicación
 
-Los casos de comportamiento abusivo o inaceptable pueden reportarse contactando al equipo del proyecto. Todas las quejas serán revisadas e investigadas de forma justa.
+Los casos de comportamiento abusivo o inaceptable pueden reportarse contactando de forma privada a los mantenedores del repositorio (Grupo 3 — proyecto ABP MCDI500). Todas las quejas serán revisadas e investigadas de forma justa y confidencial.
 
 Este Código de Conducta es una adaptación del Contributor Covenant (https://www.contributor-covenant.org), versión 2.1. 

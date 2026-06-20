@@ -82,10 +82,11 @@ Usamos prefijos tipo *Conventional Commits* para que el historial sea legible:
 | `fix:` | Corrección de un error |
 | `docs:` | Cambios en documentación |
 | `refactor:` | Reorganización de código sin cambiar comportamiento |
+| `test:` | Pruebas y validaciones |
 | `data:` | Cambios en datasets o datos procesados |
 | `chore:` | Tareas de mantenimiento (dependencias, config) |
 
-**Ejemplo:** `feat(F1): agrega notebook de exploración de calidad del aire`
+**Ejemplo:** `feat(F3): agrega notebook de exploración de calidad del aire`
 
 ## Buenas prácticas
 
