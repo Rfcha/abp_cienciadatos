@@ -2,7 +2,7 @@
 
 ## Magíster en Ciencia de Datos e Inteligencia Artificial Avanzada — UNAB
 
-**Curso:** MCDI500 — Programación para la Ciencia de Datos
+**Curso:** MCDI500 — Herramientas de Software Científico (202681.2535)
 **Proyecto:** Aprendizaje Basado en Proyectos (ABP) — Ciencia de Datos Reproducible
 **Equipo:** Grupo 3
 
@@ -371,6 +371,17 @@ La participación de cada integrante se evidencia mediante los commits individua
 
 ### 9.1 Contribución por fase
 
+**Total consolidado del proyecto F1–F4** (226 commits)
+
+| Integrante | Commits | Participación |
+|---|---|---|
+| Rodrigo Chinchón Ayala | 166 | 73,5% |
+| Sergio Fernández Almonacid | 33 | 14,6% |
+| Pablo Villalobos González | 27 | 11,9% |
+| **TOTAL** | **226** | **100%** |
+
+> Cifras consolidadas sobre el historial completo del repositorio (226 commits, 81 Pull Requests, 72 fusionados, 36 merges), con identidades unificadas vía `.mailmap`. Coinciden con el Anexo A del informe final. El desglose por fase de F1 y F2 se detalla a continuación.
+
 **Fase 1 — Definición y entorno reproducible** (37 commits)
 
 | Integrante | Commits | Participación |
@@ -519,7 +530,7 @@ jupyter nbconvert --to notebook --execute F3-calidad-aire-santiago/notebooks/02_
 | F2 — Preprocesamiento | Finalizado |
 | F3 `F3-calidad-aire-santiago` — exploración | Finalizado |
 | F3 `F3-calidad-aire-santiago` — núcleo algorítmico | Finalizado |
-| F4 — Entrega final | En desarrollo |
+| F4 — Entrega final | Finalizado |
 | Pull Request template | Implementado |
 | Flujo colaborativo | Documentado |
 | Entorno reproducible | Documentado |
@@ -532,4 +543,4 @@ jupyter nbconvert --to notebook --execute F3-calidad-aire-santiago/notebooks/02_
 
 ## 17. Licencia y uso académico
 
-Este repositorio tiene fines exclusivamente académicos y corresponde al desarrollo del Proyecto Integrador ABP del **Grupo 3** para el curso **MCDI500 — Programación para la Ciencia de Datos**, perteneciente al **Magíster en Ciencia de Datos e Inteligencia Artificial Avanzada de la Universidad Andrés Bello**. La licencia se encuentra en el archivo `LICENSE`.
+Este repositorio tiene fines exclusivamente académicos y corresponde al desarrollo del Proyecto Integrador ABP del **Grupo 3** para el curso **MCDI500 — Herramientas de Software Científico**, perteneciente al **Magíster en Ciencia de Datos e Inteligencia Artificial Avanzada de la Universidad Andrés Bello**. La licencia se encuentra en el archivo `LICENSE`.
